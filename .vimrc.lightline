@@ -1,0 +1,121 @@
+let g:airline_powerline_fonts = 1
+
+
+if !has('gui_running')
+    set t_Co=256
+endif
+
+
+let g:lightline = {
+    \   'colorscheme': 'one',
+    \   'active': {
+    \       'left': [
+    \                [ 'mode', 'paste' ],
+    \                [ 'readonly', 'filename_modified', 'gitbranch' ],
+    \                [ 'aaatata']
+    \               ],
+    \       'right': [
+    \                 [ 'percent', 'lineinfo' ],
+    \                 [ 'filetype']
+    \                ]
+    \   },
+    \   'inactive': {
+    \       'left': [
+    \                [ 'mode_explorer' ],
+    \                [ 'readonly', 'filename_modified' ],
+    \               ],
+    \       'right': [
+    \                 [ 'filetype']
+    \                ]
+    \   },
+    \   'component_function': {
+    \       'mode': 'LightlineMode',
+    \       'mode_explorer': 'LightlineModeEx',
+    \       'readonly': 'LightlineReadonly',
+    \       'filename_modified': 'LightlineFilename',
+    \       'gitbranch': 'LightlineBranch',
+    \       'aaatata': 'LightlineAaatata',
+    \       'lineinfo': 'LightlineLineinfo',
+    \       'percent': 'LightlinePercent',
+    \       'filetype': 'LightlineFiletype',
+    \   },
+    \   'separator': { 'left': '', 'right': ''  },
+    \   'subseparator': { 'left': '', 'right': ''  },
+    \ }
+
+"=== === === === === === === === === === === === === === === === === === === ===
+" functions
+"=== === === === === === === === === === === === === === === === === === === ===
+function! LightlineMode() abort
+    let ftmap = {
+                \ 'coc-explorer': 'EXPLORER',
+                \ 'netrw': 'EXPLORER',
+                \}
+    return get(ftmap, &filetype, lightline#mode())
+endfunction
+
+function! LightlineModeEx() abort
+    let ftmap = {
+                \ 'coc-explorer': 'EXPLORER',
+                \ 'netrw': 'EXPLORER',
+                \}
+    return get(ftmap, &filetype, '')
+endfunction
+
+function! LightlineReadonly() abort
+    return winwidth(0) >= 44 ? (&readonly ? '' : '') : ''
+endfunction
+
+function! LightlineFilename()
+    if winwidth(0) < 44
+        return ''
+    endif
+
+    let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+    let modified = &modified ? ' +' : ''
+    return filename . modified
+endfunction
+
+function! LightlineBranch() abort
+    if &filetype ==# 'coc-explorer' || &filetype ==# 'netrw'
+        return ''
+    endif
+
+    let l:branch = gitbranch#name()
+    return strlen(l:branch) ? ' ' . l:branch : ''
+endfunction
+
+function! LightlineAaatata() abort
+    return winwidth(0) >= 65 ? '☜(ﾟヮﾟ☜)🎶' : ''
+endfunction
+
+function! LightlineLineinfo() abort
+    if winwidth(0) < 44
+        return ''
+    endif
+
+    let l:current_line = printf('%-3s', line('.'))
+    let l:max_line = printf('%-3s', line('$'))
+    let l:lineinfo = l:current_line . '/' . l:max_line
+    return l:lineinfo
+endfunction
+
+function! LightlinePercent() abort
+    if winwidth(0) < 44
+        return ''
+    endif
+
+    let l:percent = line('.') * 100 / line('$') . '%'
+    return printf('%-4s', l:percent)
+endfunction
+
+function! LightlineFiletype() abort
+    let l:icon = WebDevIconsGetFileTypeSymbol()
+
+    if &filetype ==# 'coc-explorer'
+        let l:branch = gitbranch#name()
+        return strlen(l:branch) ? (strlen(l:branch) <= 9 ? ' ' . l:branch : '') : l:icon
+    endif
+
+    return winwidth(0) >= 65 ? (strlen(&filetype) ? l:icon .' '. &filetype : l:icon) : l:icon
+endfunction

@@ -1,0 +1,51 @@
+# my own Aliases
+alias cdheum='cd /mnt/c/HEUM'
+alias cdlab='cd /mnt/c/HEUM/LABORATORY'
+alias cdcs='cd /mnt/c/HEUM/COMP\ SCI'
+alias v='vi'
+alias g='git'
+alias bat='batcat -n --theme TwoDark --color "always"'
+alias tree='tree -C'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# ls
+alias ls='ls --color=auto'
+alias ll='ls -alFh'
+
+# grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# python
+alias p3='python3'
+alias virenv-on='echo "   $(tput setaf 1)> $(tput setaf 2)source bin/activate$(tput sgr0)"; source bin/activate'
+alias django-on='echo "   $(tput setaf 1)> $(tput setaf 2)python manage.py runserver$(tput sgr0)"; wslview http://127.0.0.1:8000/; python manage.py runserver'
+
+# fzf
+source /usr/share/doc/fzf/examples/key-bindings.bash
+source /usr/share/doc/fzf/examples/completion.bash
+export FZF_COMPLETION_TRIGGER='==='
+export FZF_DEFAULT_COMMAND='find .'
+export FZF_DEFAULT_OPTS='--multi --height 50% --cycle --keep-right'
+
+# for wsl only
+alias Ex='explorer.exe'
+alias server-on='echo "   $(tput setaf 1)> $(tput setaf 2)python3 -m http.server$(tput sgr0)"; wslview http://localhost:8000; python3 -m http.server'
+alias ctl-on='echo "   $(tput setaf 1)> $(tput setaf 2)systemctl enable$(tput sgr0)"; systemctl enable'
+
+# sudo update
+alias dangerous='cd; sudo apt update && sudo apt full-upgrade; sudo apt autoremove; sudo apt autoclean; sudo apt clean;'
+
+# kali
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;33m'    # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline

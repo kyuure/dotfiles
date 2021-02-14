@@ -1,0 +1,8 @@
+.vim/
+.vim/coc-settings-json
+
+# Output files
+*.o
+
+# Compiled Python files
+*.pyc

@@ -1,0 +1,62 @@
+" Leader Map for vim
+let mapleader = " " "now <leader> is same as <space> lols.
+
+
+" to use Alt in insert mode
+" source: https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
+execute "set <M-h>=\eh"
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+execute "set <M-l>=\el"
+
+
+" Shortcutting split windows navigation, saving a keypress:
+nmap <leader>h <C-w>h
+nmap <leader>j <C-w>j
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
+nmap <Up> <Nop>
+nmap <Down> <Nop>
+nmap <Left> <Nop>
+nmap <Right> <Nop>
+
+" Move in insert mode
+imap <M-h> <Left>
+imap <M-j> <Down>
+imap <M-k> <Up>
+imap <M-l> <Right>
+
+" Delete without yank
+nmap <leader>d "_d
+nnoremap x "_x"
+
+" Split window
+nmap <leader>sl :vsplit<CR> <C-w>w
+nmap <leader>sj :split<CR> <C-w>w
+nmap <leader>t :term<CR><C-w>k :resize 25<CR>
+
+" Exit
+nmap <leader>q :q<CR>
+" Newtab and explore
+nmap <leader>n :tabnew<bar> :Ex<CR>
+" Switch tab
+nmap <Tab> :tabnext<CR>
+" Replace all is aliased to; %s/old/new/g 
+nmap <leader>c :%s//g<Left><Left>
+" Open fzf
+nmap <leader>f :Files ./<CR>
+" Lines fzf
+nmap <leader>w :BLines<CR>
+imap <C-W> <plug>(fzf-complete-line)
+" Show coc-explorer
+nmap <leader>e :CocCommand explorer <CR>
+" auto exit when explorer the only buffer
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+" netrw
+" Show explorer on new split window
+nmap <leader>o :Vexplore<CR>
+autocmd VimEnter * if argc() == 0 | Explore! | endif
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 50
