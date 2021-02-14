@@ -1,4 +1,6 @@
 # dotfiles
+my very own dotfiles. use bash for shell.
+I make this repo so that I can backup my dotfiles easily.
 
 ## what i use
 Kali WSL
