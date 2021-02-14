@@ -17,7 +17,7 @@ set lazyredraw
 set hlsearch
 " does searches incremenentaly
 set incsearch
-" cursorline?? that hurt
+" turn out cursorline entertain me lol but still no
 set nocursorline
 " find like fuzzy finder :find <filename_to_regex>
 set path+=**
