@@ -20,9 +20,6 @@ sudo pip install jedi
 # why? because i want to.
 curl -fsSL https://starship.rs/install.sh | bash
 
-# for gui in wsl 2
-apt uninstall xfce4 xrdp
-
 # https://github.com/wslutilities/wslu
 sudo apt install gnupg2 apt-transport-https
 wget -O - https://access.patrickwu.space/wslu/public.asc | sudo apt-key add -
