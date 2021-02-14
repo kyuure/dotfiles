@@ -1,13 +1,17 @@
 # dotfiles
 my very own dotfiles. use bash for shell.
+
 I make this repo so that I can backup my dotfiles easily.
 
+
 ## what i use
-Kali WSL
-why? hmm🤔
+Kali WSL.
+
+_why?_ hmm🤔
+
 
 ## what i do after install a new fresh terminal
-```
+```sh
 sudo apt install htop
 sudo apt install clang
 sudo apt install fzf
