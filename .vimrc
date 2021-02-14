@@ -30,6 +30,12 @@ set softtabstop=4
 set shiftwidth=4
 " only for html
 autocmd FileType html setlocal ts=2 sts=2 sw=2
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+"let g:user_emmet_mode='n'
+let g:user_emmet_leader_key='<C-D>'
+
 " converts tabs to spaces
 set expandtab
 set smartindent
@@ -110,9 +116,13 @@ highlight CocFloating ctermbg=Black guibg=#3b3750
 "highlight CocFloating ctermbg=White guibg=#c4c8af
 " CocErrorFloat CocHelperNormalFloat CocHintFloat CocInfoFloat CocWarningFloat 
 
+" emmet
+    Plug 'mattn/emmet-vim'
+
 " fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+
 " auto pairs
     Plug 'jiangmiao/auto-pairs'
 
@@ -122,6 +132,7 @@ highlight CocFloating ctermbg=Black guibg=#3b3750
 
 " Lightline
     Plug 'itchyny/lightline.vim'
+
 " NERDFonts. should i use this or hmm :(
     Plug 'ryanoasis/vim-devicons'
 
