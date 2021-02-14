@@ -2,6 +2,9 @@
     // source: https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/coc-settings.json
 
 
+    // update
+    "coc.preferences.extensionUpdateCheck": "weekly",
+
     // display
     "diagnostic.errorSign": "✘",
     "diagnostic.warningSign": "",

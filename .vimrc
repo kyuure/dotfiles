@@ -98,13 +98,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     let g:coc_global_extensions = [
                 \   'coc-clangd',
-                \   'coc-css',
-                \   'coc-eslint',
                 \   'coc-explorer',
-                \   'coc-html',
                 \   'coc-json',
                 \   'coc-pyright',
                 \   'coc-python',
+                \   'coc-sh',
                 \   'coc-tsserver',
                 \   'coc-xml'
                 \]
@@ -124,7 +122,6 @@ highlight CocFloating ctermbg=Black guibg=#3b3750
 
 " Lightline
     Plug 'itchyny/lightline.vim'
-
 " NERDFonts. should i use this or hmm :(
     Plug 'ryanoasis/vim-devicons'
 
