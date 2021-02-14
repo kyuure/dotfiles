@@ -2,6 +2,7 @@
 my very own dotfiles. use bash for shell.
 
 I make this repo so that I can backup my dotfiles easily.
+![alt text](https://github.com/kyuure/dotfiles/tree/main/.screenshot/ssan.png)
 
 
 ## what i use
