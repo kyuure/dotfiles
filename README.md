@@ -1,8 +1,7 @@
 # dotfiles
 my very own dotfiles. use bash for shell.
-
-I make this repo so that I can backup my dotfiles easily.
 ![alt text](https://github.com/kyuure/dotfiles/blob/main/.screenshot/ssan.png)
+I make this repo so that I can backup my dotfiles easily.
 
 
 ## what i use
