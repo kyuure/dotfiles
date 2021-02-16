@@ -82,7 +82,7 @@ function! LightlineBranch() abort
     endif
 
     let l:branch = gitbranch#name()
-    return strlen(l:branch) ? ' ' . l:branch : ''
+    return strlen(l:branch) ? (strlen(l:branch) >= 64 ? ' ' . l:branch : '') : ''
 endfunction
 
 function! LightlineAaatata() abort
@@ -90,13 +90,14 @@ function! LightlineAaatata() abort
 endfunction
 
 function! LightlineLineinfo() abort
-    if winwidth(0) < 44
+    if winwidth(0) < 45
         return ''
     endif
 
     let l:current_line = printf('%-3s', line('.'))
-    let l:max_line = printf('%-3s', line('$'))
-    let l:lineinfo = l:current_line . '/' . l:max_line
+    let l:current_col  = printf('%-3s', col('.'))
+    "let l:max_line = printf('%-3s', line('$'))
+    let l:lineinfo = l:current_line . ':' . l:current_col "'/' . l:max_line
     return l:lineinfo
 endfunction
 
