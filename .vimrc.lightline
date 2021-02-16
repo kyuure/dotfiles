@@ -67,12 +67,12 @@ function! LightlineReadonly() abort
 endfunction
 
 function! LightlineFilename()
-    if winwidth(0) < 44
-        return ''
-    endif
-
     let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
     let modified = &modified ? ' +' : ''
+
+    if winwidth(0) < 44
+        return filename
+    endif
     return filename . modified
 endfunction
 
