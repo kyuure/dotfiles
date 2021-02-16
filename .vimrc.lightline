@@ -47,19 +47,19 @@ let g:lightline = {
 " functions
 "=== === === === === === === === === === === === === === === === === === === ===
 function! LightlineMode() abort
-    let ftmap = {
+    let l:ftmap = {
                 \ 'coc-explorer': 'EXPLORER',
                 \ 'netrw': 'EXPLORER',
                 \}
-    return get(ftmap, &filetype, lightline#mode())
+    return get(l:ftmap, &filetype, lightline#mode())
 endfunction
 
 function! LightlineModeEx() abort
-    let ftmap = {
+    let l:ftmap = {
                 \ 'coc-explorer': 'EXPLORER',
                 \ 'netrw': 'EXPLORER',
                 \}
-    return get(ftmap, &filetype, '')
+    return get(l:ftmap, &filetype, '')
 endfunction
 
 function! LightlineReadonly() abort
@@ -67,13 +67,13 @@ function! LightlineReadonly() abort
 endfunction
 
 function! LightlineFilename()
-    let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
-    let modified = &modified ? ' +' : ''
+    let l:filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+    let l:modified = &modified ? ' +' : ''
 
     if winwidth(0) < 44
-        return filename
+        return l:filename
     endif
-    return filename . modified
+    return l:filename . l:modified
 endfunction
 
 function! LightlineBranch() abort
