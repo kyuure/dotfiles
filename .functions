@@ -1,7 +1,23 @@
 # Create a new directory and enter it
 function mkd() {
-        mkdir -p "$@" && cd "$_";
+    mkdir -p "$@" && cd "$_";
         
+}
+
+# danger zone
+function dangerous() {
+    pushd ~;
+    echo "   $(tput setaf 1)> $(tput setaf 2)pushd ~$(tput sgr0)"
+    sudo apt update && sudo apt full-upgrade;
+    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt update && sudo apt full-upgrade$(tput sgr0)"
+    sudo apt autoremove;
+    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt autoremove$(tput sgr0)"
+    sudo apt autoclean;
+    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt autoclean$(tput sgr0)"
+    sudo apt clean;
+    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt clean$(tput sgr0)"
+    popd;
+    echo "   $(tput setaf 1)> $(tput setaf 2)popd$(tput sgr0)"
 }
 
 
