@@ -36,9 +36,6 @@ alias Ex='explorer.exe'
 alias server-on='echo "   $(tput setaf 1)> $(tput setaf 2)python3 -m http.server$(tput sgr0)"; wslview http://localhost:8000; python3 -m http.server'
 alias ctl-on='echo "   $(tput setaf 1)> $(tput setaf 2)systemctl enable$(tput sgr0)"; systemctl enable'
 
-# sudo update
-alias dangerous='cd; sudo apt update && sudo apt full-upgrade; sudo apt autoremove; sudo apt autoclean; sudo apt clean;'
-
 # kali
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
