@@ -28,7 +28,7 @@ imap <M-l> <Right>
 
 " Delete without yank
 nmap <leader>d "_d
-nnoremap x "_x"
+nnoremap x "_x
 
 " Split window
 nmap <leader>sl :vsplit<CR> <C-w>w
@@ -41,6 +41,7 @@ nmap <leader>q :q<CR>
 nmap <leader>n :tabnew<bar> :Ex<CR>
 " Switch tab
 nmap <Tab> :tabnext<CR>
+
 " Replace all is aliased to; %s/old/new/g 
 nmap <leader>c :%s//g<Left><Left>
 " Open fzf
@@ -48,6 +49,7 @@ nmap <leader>f :Files ./<CR>
 " Lines fzf
 nmap <leader>w :BLines<CR>
 imap <C-W> <plug>(fzf-complete-line)
+
 " Show coc-explorer
 nmap <leader>e :CocCommand explorer <CR>
 " auto exit when explorer the only buffer
