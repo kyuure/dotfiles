@@ -30,6 +30,10 @@ imap <M-l> <Right>
 nmap <leader>d "_d
 nnoremap x "_x
 
+" Fold code block uses curly braces
+" tbh i never used this before, might try it later
+nmap <leader>z zfa}
+
 " Split window
 nmap <leader>sl :vsplit<CR> <C-w>w
 nmap <leader>sj :split<CR> <C-w>w
