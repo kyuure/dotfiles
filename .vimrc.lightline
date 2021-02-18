@@ -70,9 +70,6 @@ function! LightlineFilename()
     let l:filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
     let l:modified = &modified ? ' +' : ''
 
-    if winwidth(0) < 44
-        return l:filename
-    endif
     return l:filename . l:modified
 endfunction
 
