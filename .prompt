@@ -1,6 +1,6 @@
 #=== === === === === === === === === === === === === === === === === === === ===
 # git info
-# in some case, it's make prompt really slow for like 0.8s :(
+# in some cases, it's make prompt really slow for like 0.8s :(
 #=== === === === === === === === === === === === === === === === === === === ===
 ginf() {
     # Check if the current directory is in a Git repository.
