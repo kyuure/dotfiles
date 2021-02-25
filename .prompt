@@ -1,6 +1,7 @@
 #=== === === === === === === === === === === === === === === === === === === ===
 # git info
 # in some cases, it's make prompt really slow for like 0.8s :(
+# Source: https://github.com/magicmonty/bash-git-prompt/blob/master/gitstatus.sh
 #=== === === === === === === === === === === === === === === === === === === ===
 ginf() {
     # Check if the current directory is in a Git repository.
@@ -11,7 +12,6 @@ ginf() {
     fi
 
     # check for git status
-    # Source: https://github.com/magicmonty/bash-git-prompt/blob/master/gitstatus.sh
     git_status="$(git status --porcelain --branch)"
     git_dir="$(git rev-parse --git-dir 2>/dev/null)"
 
