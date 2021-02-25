@@ -62,7 +62,8 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 " netrw
 " Show explorer on new split window
 nmap <leader>o :Vexplore<CR>
-autocmd VimEnter * if argc() == 0 | Explore! | endif
+nmap <leader>p :Ex<CR>
+"autocmd VimEnter * if argc() == 0 | Explore! | endif
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 50
