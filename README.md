@@ -1,11 +1,11 @@
 # dotfiles
 my very own dotfiles. use bash for shell.
-![alt text](https://github.com/kyuure/dotfiles/blob/main/.screenshot/ssan.png)
-I make this repo so that I can backup my dotfiles easily.
+![alt text](https://github.com/kyuure/dotfiles/blob/main/.screenshot/ssan.png "ssan doang")
+I made this repo so that I can backup my dotfiles easily.
 
 
 ## what i use
-Kali WSL.
+Kali WSL2.
 
 _why?_ hmm🤔
 
