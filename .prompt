@@ -117,8 +117,9 @@ gbranch() {
     echo -e "\033[36mon \033[1;31m \033[1;34m${branch}"
 }
 
-
+#=== === === === === === === === === === === === === === === === === === === ===
 # Prompt on right align
+#=== === === === === === === === === === === === === === === === === === === ===
 _right_info() {
     # It will looks reaaaaaaaaaally weird if you use function(s) like tput
     # because a function will be counted as a length.
