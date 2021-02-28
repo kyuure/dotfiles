@@ -2,6 +2,8 @@
 # git info
 # in some cases, it's make prompt really slow for like 0.8s :(
 # Source: https://github.com/magicmonty/bash-git-prompt/blob/master/gitstatus.sh
+# find a gold: https://www.ibm.com/developerworks/library/l-tip-prompt/index.html
+#              should have check it later
 #=== === === === === === === === === === === === === === === === === === === ===
 ginf() {
     # Check if the current directory is in a Git repository.
