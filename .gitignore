@@ -2,7 +2,22 @@
 .vim/coc-settings-json
 
 # Output files
+*.com
+*.class
+*.dll
+*.exe
 *.o
+*.so
 
 # Compiled Python files
 *.pyc
+
+# packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
