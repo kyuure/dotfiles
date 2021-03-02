@@ -8,7 +8,7 @@
 
 
 " set mouse enabled
-set mouse=n
+set mouse=nv
 " scroll when i'm 5 away from the edge
 set scrolloff=5
 " too lazy to redraw while executing macros
@@ -143,6 +143,11 @@ highlight CocFloating ctermbg=Black guibg=#3b3750
 "    Plug 'junegunn/gv.vim'
 
 call plug#end()
+
+"=== === === === === === === === === === === === === === === === === === === ===
+"  g i t
+"=== === === === === === === === === === === === === === === === === === === ===
+"autocmd Filetype gitcommit setlocal spell textwidth=72
 
 
 "=== === === === === === === === === === === === === === === === === === === ===
