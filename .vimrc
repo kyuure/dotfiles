@@ -28,9 +28,6 @@ set belloff=all
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-" only for html
-autocmd FileType html setlocal ts=2 sts=2 sw=2
-
 " converts tabs to spaces
 set expandtab
 set smartindent
@@ -40,6 +37,10 @@ set list
 set listchars=tab:\|\ ,
 " so that backspace works like it used to be
 set backspace=indent,eol,start
+
+" set indent that differ from 4 spaces
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 
 " make one line exactly one line
 set nowrap
