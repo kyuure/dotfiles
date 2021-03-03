@@ -30,11 +30,6 @@ set softtabstop=4
 set shiftwidth=4
 " only for html
 autocmd FileType html setlocal ts=2 sts=2 sw=2
-" emmet
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-"let g:user_emmet_mode='n'
-let g:user_emmet_leader_key='<C-D>'
 
 " converts tabs to spaces
 set expandtab
@@ -95,6 +90,12 @@ set laststatus=2
 set showcmd
 set noru
 " don't change the background >:(;highlight Normal guibg=none
+
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+"let g:user_emmet_mode='n'
+let g:user_emmet_leader_key='<C-D>'
 
 
 " PLUGGINS
