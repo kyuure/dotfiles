@@ -34,7 +34,7 @@ set smartindent
 set autoindent
 " displaying tabs as a character
 set list
-set listchars=tab:\|\ ,
+set listchars=tab:»\ ,extends:@,precedes:^
 " so that backspace works like it used to be
 set backspace=indent,eol,start
 
