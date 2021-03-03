@@ -107,53 +107,53 @@ let g:user_emmet_leader_key='<C-D>'
 call plug#begin('~/.vim/plugged')
 
 " Autocompletion
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    let g:coc_global_extensions = [
-                \   'coc-clangd',
-                \   'coc-css',
-                \   'coc-explorer',
-                \   'coc-html',
-                \   'coc-json',
-                \   'coc-pyright',
-                \   'coc-python',
-                \   'coc-sh',
-                \   'coc-tsserver',
-                \   'coc-xml'
-                \]
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  let g:coc_global_extensions = [
+              \   'coc-clangd',
+              \   'coc-css',
+              \   'coc-explorer',
+              \   'coc-html',
+              \   'coc-json',
+              \   'coc-pyright',
+              \   'coc-python',
+              \   'coc-sh',
+              \   'coc-tsserver',
+              \   'coc-xml'
+              \]
 highlight CocFloating ctermbg=Black guibg=#3b3750
 "highlight CocFloating ctermbg=White guibg=#c4c8af
 " CocErrorFloat CocHelperNormalFloat CocHintFloat CocInfoFloat CocWarningFloat 
 
 " emmet
-    Plug 'mattn/emmet-vim'
+  Plug 'mattn/emmet-vim'
 
 " fzf
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
 " auto pairs
-    Plug 'jiangmiao/auto-pairs'
+  Plug 'jiangmiao/auto-pairs'
 
 " git for vim
-"    Plug 'tpope/vim-fugitive'
-    Plug 'itchyny/vim-gitbranch'
+"  Plug 'tpope/vim-fugitive'
+  Plug 'itchyny/vim-gitbranch'
 
 " Lightline
-    Plug 'itchyny/lightline.vim'
+  Plug 'itchyny/lightline.vim'
 
 " NERDFonts. should i use this or hmm :(
-    Plug 'ryanoasis/vim-devicons'
+  Plug 'ryanoasis/vim-devicons'
 
 " InTeReStInG
-"    Plug 'junegunn/goyo.vim'
-"    Plug 'junegunn/gv.vim'
+"  Plug 'junegunn/goyo.vim'
+"  Plug 'junegunn/gv.vim'
 
 call plug#end()
 
 "=== === === === === === === === === === === === === === === === === === === ===
 "  g i t
 "=== === === === === === === === === === === === === === === === === === === ===
-"autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 
 "=== === === === === === === === === === === === === === === === === === === ===
