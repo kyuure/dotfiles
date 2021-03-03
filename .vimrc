@@ -39,8 +39,12 @@ set listchars=tab:\|\ ,
 set backspace=indent,eol,start
 
 " set indent that differ from 4 spaces
-autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType bash setlocal ts=2 sts=2 sw=2
+autocmd FileType vim setlocal ts=2 sts=2 sw=2
 autocmd FileType cpp setlocal ts=2 sts=2 sw=2
+autocmd FileType css setlocal ts=2 sts=2 sw=2
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 " make one line exactly one line
 set nowrap
