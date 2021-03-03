@@ -5,6 +5,7 @@
 "       : Takuya Matsuyama - https://www.youtube.com/watch?v=sSOfr2MtRU8
 "               https://github.com/craftzdog/dotfiles-public
 "       : Junnegun Choi - https://github.com/junegunn/dotfiles/blob/master/vimrc
+"       : David Barnett - https://github.com/dbarnett/dotfiles/blob/master/.vimrc
 
 
 " set mouse enabled
