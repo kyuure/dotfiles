@@ -8,8 +8,10 @@ function mkd() {
 function dangerous() {
     echo "   $(tput setaf 1)> $(tput setaf 2)pushd ~$(tput sgr0)"
     pushd ~;
-    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt update && sudo apt full-upgrade$(tput sgr0)"
-    sudo apt update && sudo apt full-upgrade;
+    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt update$(tput sgr0)"
+    sudo apt update;
+    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt full-upgrade$(tput sgr0)"
+    sudo apt full-upgrade;
     echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt autoremove$(tput sgr0)"
     sudo apt autoremove;
     echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt autoclean$(tput sgr0)"
