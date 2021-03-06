@@ -31,8 +31,3 @@ echo "deb https://access.patrickwu.space/wslu/debian buster main" | sudo tee -a 
 sudo apt update
 sudo apt install wslu
 ```
-
-## cheatsheet wslu
-  1. wslfetch: A WSL screenshot information tool to print information in an elegant way.
-  2. wslview: A fake WSL browser that can help you open link in default Windows browser or open files on Windows.
-  3. wslupath (⚠ Deprecated): A WSL tool to convert path styles.
