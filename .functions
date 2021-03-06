@@ -41,13 +41,6 @@ fzv() {
     vim $(fz)
 }
 
-# fuzzy history
-fzhist() {
-    command=$(history | fzf --tac | sed -re 's/^\s*[0-9]+\s*//')
-    echo "   $(tput setaf 1)> $(tput setaf 2)${command}$(tput sgr0)"
-    eval $command
-}
-
 # cd and fzf
 fzcd() {
     while true; do
