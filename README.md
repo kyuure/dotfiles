@@ -17,6 +17,7 @@ sudo apt install clang
 sudo apt install fzf
 sudo apt install bat
 #sudo apt install exuberant-ctags
+#sudo apt instal strace ltrace
 
 sudo apt install python3
 sudo pip install jedi
