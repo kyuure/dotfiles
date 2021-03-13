@@ -98,7 +98,7 @@ ginf() {
     fi
 
     # echo to PS1
-    echo "$(tput setab 4) $(tput setaf 215)on ${branch}$(tput setaf 50)${status}$(tput setaf 252)${git_status} $(tput sgr0)"
+    echo "$(tput setaf 215)on ${branch}$(tput setaf 50)${status}$(tput setaf 252)${git_status}"
 
     # unset all variables
     unset branch git_dir num_staged num_changed num_conflicts num_untracked status num_stashed stash_file clean fields remotes
