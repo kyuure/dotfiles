@@ -8,7 +8,7 @@ esac
 # .dotfiles
 # inspired by: https://github.com/mathiasbynens/dotfiles
 #=== === === === === === === === === === === === === === === === === === === ===
-for file in ~/.{path,env,aliases,functions}; do
+for file in ~/.{aliases,env,functions,inputrc}; do
     [ -r "$file"  ] && [ -f "$file"  ] && source "$file";
 done;
 unset file;
