@@ -84,21 +84,20 @@ ginf() {
     # branch status
     IFS="^" read -ra fields <<< "${branch_line/\#\# }"
     branch="${fields[0]}"
-    status=""
     if [[ "${#fields[@]}" -ne 1  ]]; then
         IFS="[,]" read -ra remotes <<< "${fields[1]}"
         for remote in "${remotes[@]}"; do
             if [[ "${remote}" == "ahead "*  ]]; then
-                status+="↑${remote:6}"
+                git_status+=" ↑${remote:6}"
             fi
             if [[ "${remote}" == "behind "*  ]]; then
-                status+="↓${remote:7}"
+                git_status+=" ↓${remote:7}"
             fi
         done
     fi
 
     # echo to PS1
-    echo "$(tput setaf 215)on ${branch}$(tput setaf 50)${status}$(tput setaf 252)${git_status}"
+    echo "$(tput setaf 215)on ${branch}$(tput setaf 50)$(tput setaf 147)${git_status}"
 
     # unset all variables
     unset branch git_dir num_staged num_changed num_conflicts num_untracked status num_stashed stash_file clean fields remotes
