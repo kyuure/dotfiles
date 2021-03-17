@@ -9,6 +9,7 @@ alias tree='tree -C'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+alias clear='clear; colorscript random'
 
 # ls
 alias ls='ls --color=auto'
@@ -29,7 +30,7 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 source /usr/share/doc/fzf/examples/completion.bash
 export FZF_COMPLETION_TRIGGER='==='
 export FZF_DEFAULT_COMMAND='find .'
-export FZF_DEFAULT_OPTS='--multi --height 50% --cycle --keep-right'
+export FZF_DEFAULT_OPTS='--multi --height 50% --cycle --keep-right --reverse'
 
 # for wsl only
 alias Ex='explorer.exe'
