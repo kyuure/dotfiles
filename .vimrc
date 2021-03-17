@@ -95,8 +95,9 @@ set laststatus=2
 " show keystroke
 set showcmd
 set noru
-" don't change the background >:(;highlight Normal guibg=none
+" don't change the background >:(;
 colorscheme pablo
+highlight Normal guibg=NONE ctermbg=NONE
 
 " emmet
 let g:user_emmet_install_global = 0
