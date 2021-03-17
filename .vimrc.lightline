@@ -87,7 +87,7 @@ function! LightlineBranch() abort
 endfunction
 
 function! LightlineAaatata() abort
-  return winwidth(0) >= 65 ? (winwidth(0) >= 65 ? ' ' : '') : ''
+  return winwidth(0) >= 65 ? (winwidth(0) >= 45 ? ' ' : '') : ''
 endfunction
 
 function! LightlineLineinfo() abort
