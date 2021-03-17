@@ -96,7 +96,6 @@ set laststatus=2
 set showcmd
 set noru
 " don't change the background >:(;
-colorscheme pablo
 highlight Normal guibg=NONE ctermbg=NONE
 
 " emmet
