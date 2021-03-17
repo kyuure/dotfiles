@@ -97,7 +97,7 @@ set showcmd
 set noru
 " don't change the background >:(;
 highlight Normal ctermbg=NONE
-highlight LineNr ctermfg=DarkMagenta
+highlight LineNr ctermfg=DarkBlue
 
 " emmet
 let g:user_emmet_install_global = 0
