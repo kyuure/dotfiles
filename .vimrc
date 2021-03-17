@@ -122,7 +122,7 @@ call plug#begin('~/.vim/plugged')
               \   'coc-tsserver',
               \   'coc-xml'
               \]
-highlight CocFloating ctermbg=Black guibg=#3b3750
+highlight CocFloating ctermbg=Black guibg=#332a57
 "highlight CocFloating ctermbg=White guibg=#c4c8af
 " CocErrorFloat CocHelperNormalFloat CocHintFloat CocInfoFloat CocWarningFloat 
 
