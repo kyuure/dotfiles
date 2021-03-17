@@ -67,6 +67,10 @@ function! LightlineReadonly() abort
 endfunction
 
 function! LightlineFilename()
+  if &filetype ==# 'coc-explorer' || &filetype ==# 'netrw'
+    return ''
+  endif
+
   let l:filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
   let l:modified = &modified ? ' +' : ''
 
