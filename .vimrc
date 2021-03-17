@@ -96,6 +96,7 @@ set laststatus=2
 set showcmd
 set noru
 " don't change the background >:(;highlight Normal guibg=none
+colorscheme pablo
 
 " emmet
 let g:user_emmet_install_global = 0
