@@ -14,18 +14,17 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "closeOnExit": true,
-            "historySize": 9001,
-            "fontFace": "CaskaydiaCovePL Nerd Font",
-            "fontSize": 15, //22,
-            "fontWeight": "extra-light",
-            "padding": "0",
-            "cursorShape": "emptyBox", //"vintage", //
-            "cursorHeight": 50,
-            "cursorColor": "#f0f",
-            "colorScheme": "jubi", //"Night Owlish Light", //
-            "tabColor": "#535"
-
+                "closeOnExit": true,
+                "historySize": 9001,
+                "fontFace": "CaskaydiaCovePL Nerd Font",
+                "fontSize": 15,
+                "fontWeight": "extra-light",
+                "padding": "0",
+                "cursorShape": "emptyBox",
+                "cursorHeight": 50,
+                "cursorColor": "#f0f",
+                "tabColor": "#535",
+                "colorScheme": "judy", //"Spring", //
         },
         "list":
         [
@@ -34,15 +33,18 @@
                 "hidden": false,
                 "name": "kali",
                 "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\HEUM\\wallpaper\\kali.png", //"ms-appdata:///Roaming\\kali.png",
-                // Theme
-                "backgroundImage": "C:\\HEUM\\wallpaper\\0239.jpg",
-                //"backgroundImageStretchMode": "none",
-                //"backgroundImageAlignment": "bottomRight",
+                "icon": "C:\\HEUM\\wallpaper\\terminal\\kali.png",
+		"backgroundImage": "C:\\HEUM\\wallpaper\\terminal\\0239.jpg",
                 "backgroundImageOpacity": 0.15,
                 //"useAcrylic": true,
                 "acrylicOpacity": 0.18
-
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false,
+                "fontSize": 12,
             },
             {
                 // Make changes here to the cmd.exe profile.
@@ -51,103 +53,92 @@
                 "commandline": "cmd.exe",
                 "hidden": false,
                 "experimental.retroTerminalEffect": true
-
-            },
-            {
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
-                "hidden": false,
-                "fontSize": 12,
-
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure",
                 "hidden": true
-
             }
-
         ]
-
     },
 
     "schemes": [
+// https://windowsterminalthemes.dev/
         {
-            "name": "jubi",
+            "name": "judy",
             "black": "#3b3750",
             "red": "#cf7b98",
-            "green": "#90a94b",
-            "yellow": "#6ebfc0",
+            "green": "#00fbac",
+            "yellow": "#fffa6a",
             "blue": "#576ea6",
-            "purple": "#bc4f68",
-            "cyan": "#75a7d2",
+            "purple": "#df95ff",
+            "cyan": "#86cbfe",
             "white": "#c3d3de",
             "brightBlack": "#a874ce",
-            "brightRed": "#de90ab",
-            "brightGreen": "#bcdd61",
-            "brightYellow": "#87e9ea",
-            "brightBlue": "#8c9fcd",
-            "brightPurple": "#e16c87",
-            "brightCyan": "#b7c9ef",
-            "brightWhite": "#d5e5f1",
+            "brightRed": "#ff8aa4",
+            "brightGreen": "#21f6bc",
+            "brightYellow": "#fff787",
+            "brightBlue": "#1bccfd",
+            "brightPurple": "#e6aefe",
+            "brightCyan": "#99d6fc",
+            "brightWhite": "#ffffff",
             "background": "#262b33",
-            "foreground": "#c3d3de"
-
+            "foreground": "#c3d3de",
         },
         {
-            "name": "Night Owlish Light",
-            "black": "#011627",
-            "red": "#d3423e",
-            "green": "#088076",
-            "yellow": "#daaa01",
-            "blue": "#5ca7e4",
-            "purple": "#403f53",
-            "cyan": "#08916a",
-            "white": "#7a8181",
-            "brightBlack": "#7a8181",
-            "brightRed": "#f76e6e",
-            "brightGreen": "#49d0c5",
-            "brightYellow": "#dac26b",
-            "brightBlue": "#5ca7e4",
-            "brightPurple": "#697098",
-            "brightCyan": "#00c990",
-            "brightWhite": "#989fb1",
-            "background": "#fefefe",
-            "foreground": "#403f53"
-
+            "name": "Spring",
+            "black": "#000000",
+            "red": "#ff4d83",
+            "green": "#1f8c3b",
+            "yellow": "#1fc95b",
+            "blue": "#1dd3ee",
+            "purple": "#8959a8",
+            "cyan": "#3e999f",
+            "white": "#ffffff",
+            "brightBlack": "#000000",
+            "brightRed": "#ff8aa4",
+            "brightGreen": "#1fc231",
+            "brightYellow": "#d5b807",
+            "brightBlue": "#15a9fd",
+            "brightPurple": "#8959a8",
+            "brightCyan": "#3e999f",
+            "brightWhite": "#ffffff",
+            "background": "#ffffff",
+            "foreground": "#4d4d4c",
+            "selectionBackground": "#d6d6d6"
         }
-
     ],
 
     "actions":
     [
-        // alt+shift+= split to the right
-        // alt+shift+- split to the bottom
-        // alt+shift+<arrow key> change size of pane
-        // alt+<arrow key> change current pane
+// alt+shift+= split to the right
+// alt+shift+- split to the bottom
+// alt+shift+<arrow key> change size of pane
+// alt+<arrow key> change current pane
         {
             "command": "find",
             "keys": "ctrl+f"
-
         },
         {
             "command": {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-
-            },
+                            "action": "splitPane",
+                            "split": "auto",
+                            "splitMode": "duplicate"
+                        },
             "keys": "alt+shift+s"
-
         },
         {
             "command": "tabSearch",
             "keys": "ctrl+shift+space"
-
+        },
+        {
+            "command": "openSettings",
+            "keys": "ctrl+/"
+        },
+        {
+            "command": "",
+            "keys": "ctrl+,"
         }
-
     ]
-
 }
