@@ -1,6 +1,6 @@
 # dotfiles
 my very own dotfiles. use bash for shell.
-![alt text](https://github.com/kyuure/dotfiles/blob/main/.screenshot/2.png "ssan doang")
+![alt text](https://github.com/kyuure/dotfiles/blob/main/.screenshot/2.png "ssan doang | as in 17/03/2021")
 I made this repo so that I can backup my dotfiles easily.
 
 
