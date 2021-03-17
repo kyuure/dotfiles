@@ -96,7 +96,7 @@ set laststatus=2
 set showcmd
 set noru
 " don't change the background >:(;
-highlight Normal guibg=NONE ctermbg=NONE
+highlight Normal ctermbg=NONE
 
 " emmet
 let g:user_emmet_install_global = 0
@@ -122,8 +122,8 @@ call plug#begin('~/.vim/plugged')
               \   'coc-tsserver',
               \   'coc-xml'
               \]
-highlight CocFloating ctermbg=Black guibg=#332a57
-"highlight CocFloating ctermbg=White guibg=#c4c8af
+highlight CocFloating ctermbg=Black
+"highlight CocFloating ctermbg=White
 " CocErrorFloat CocHelperNormalFloat CocHintFloat CocInfoFloat CocWarningFloat 
 
 " emmet
