@@ -97,7 +97,7 @@ set showcmd
 set noru
 " don't change the background >:(;
 highlight Normal ctermbg=NONE
-highlight LineNr ctermfg=Blue
+highlight LineNr ctermfg=Magenta
 highlight Statement ctermfg=Blue
 
 " emmet
