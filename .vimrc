@@ -9,7 +9,7 @@
 
 
 " set mouse enabled
-set mouse=nv
+"set mouse=nv
 " scroll when i'm 5 away from the edge
 set scrolloff=5
 " too lazy to redraw while executing macros
@@ -99,6 +99,7 @@ set noru
 highlight Normal ctermbg=NONE
 highlight LineNr ctermfg=Magenta
 highlight Statement ctermfg=Blue
+highlight Identifier ctermfg=Yellow
 
 " emmet
 let g:user_emmet_install_global = 0
