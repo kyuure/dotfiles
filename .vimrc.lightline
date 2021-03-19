@@ -83,7 +83,7 @@ function! LightlineBranch() abort
   endif
 
   let l:branch = gitbranch#name()
-  return strlen(l:branch) ? (strlen(l:branch) >= 64 ? ' ' . l:branch : '') : ''
+  return strlen(l:branch) ? (winwidth(0) >= 65 ? ' ' . l:branch : '') : ''
 endfunction
 
 function! LightlineAaatata() abort
