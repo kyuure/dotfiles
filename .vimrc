@@ -100,6 +100,7 @@ highlight Normal ctermbg=NONE
 highlight LineNr ctermfg=Magenta
 highlight Statement ctermfg=Blue
 highlight Identifier ctermfg=Yellow
+highlight Comment cterm=italic
 
 " emmet
 let g:user_emmet_install_global = 0
