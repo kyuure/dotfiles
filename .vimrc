@@ -96,12 +96,6 @@ highlight Statement ctermfg=Blue
 highlight Identifier ctermfg=Yellow
 highlight Comment cterm=italic
 
-" emmet
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-"let g:user_emmet_mode='n'
-let g:user_emmet_leader_key='<C-D>'
-
 
 " PLUGGINS
 call plug#begin('~/.vim/plugged')
@@ -143,6 +137,12 @@ highlight CocFloating ctermbg=Black
 
 " NERDFonts. should i use this or hmm :(
   Plug 'ryanoasis/vim-devicons'
+
+  " emmet
+  let g:user_emmet_install_global = 0
+  autocmd FileType html,css EmmetInstall
+  "let g:user_emmet_mode='n'
+  let g:user_emmet_leader_key='<C-D>'
 
 " InTeReStInG
 "  Plug 'junegunn/goyo.vim'
