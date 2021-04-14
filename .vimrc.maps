@@ -22,6 +22,9 @@ imap <M-j> <Down>
 imap <M-k> <Up>
 imap <M-l> <Right>
 
+" Mark with ': m'
+nmap <leader>m m'
+
 " Change window
 nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
