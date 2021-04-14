@@ -9,7 +9,7 @@
 
 
 " set mouse enabled
-"set mouse=nv
+set mouse=nv
 " scroll when i'm 5 away from the edge
 set scrolloff=5
 " too lazy to redraw while executing macros
@@ -18,8 +18,6 @@ set lazyredraw
 set hlsearch
 " does searches incremenentaly
 set incsearch
-" turn out cursorline entertain me lol but still no
-set nocursorline
 " find like fuzzy finder :find <filename_to_regex>
 set path+=**
 " the bells was like a jumpscare for me :(
