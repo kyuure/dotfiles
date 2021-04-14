@@ -18,8 +18,6 @@ set lazyredraw
 set hlsearch
 " does searches incremenentaly
 set incsearch
-" find like fuzzy finder :find <filename_to_regex>
-set path+=**
 " the bells was like a jumpscare for me :(
 set belloff=all
 
