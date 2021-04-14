@@ -88,9 +88,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set hidden
 " for lightline
 set laststatus=2
-" show keystroke
-set showcmd
-set noru
+
 " don't change the background >:(;
 highlight Normal ctermbg=NONE
 highlight LineNr ctermfg=Magenta
