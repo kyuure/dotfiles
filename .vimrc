@@ -89,6 +89,10 @@ set hidden
 " for lightline
 set laststatus=2
 
+" cursor line
+set cursorline
+highlight CursorLine ctermbg=Black cterm=NONE
+
 " don't change the background >:(;
 highlight Normal ctermbg=NONE
 highlight LineNr ctermfg=Magenta
