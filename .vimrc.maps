@@ -10,29 +10,23 @@ execute "set <M-k>=\ek"
 execute "set <M-l>=\el"
 
 
-" Shortcutting split windows navigation, saving a keypress:
-nmap <leader>h <C-w>h
-nmap <leader>j <C-w>j
-nmap <leader>k <C-w>k
-nmap <leader>l <C-w>l
+" Disable move using arrow in normal mode
 nmap <Up> <Nop>
 nmap <Down> <Nop>
 nmap <Left> <Nop>
 nmap <Right> <Nop>
+
+" Change window
+nmap <leader>h <C-w>h
+nmap <leader>j <C-w>j
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
 
 " Move in insert mode
 imap <M-h> <Left>
 imap <M-j> <Down>
 imap <M-k> <Up>
 imap <M-l> <Right>
-
-" Delete without yank
-nmap <leader>d "_d
-nnoremap x "_x
-
-" Fold code block uses curly braces
-" tbh i never used this before, might try it later
-nmap <leader>z zfa}
 
 " Split window
 nmap <leader>sl :vsplit<CR> <C-w>w
@@ -46,21 +40,29 @@ nmap <leader>n :tabnew<bar> :Ex<CR>
 " Switch tab
 nmap <Tab> :tabnext<CR>
 
-" Replace all is aliased to; %s/old/new/g 
+" Delete without yank
+nmap <leader>d "_d
+nnoremap x "_x
+" Replace all: %s/old/new/g 
 nmap <leader>c :%s//g<Left><Left>
+
+" Fold code block uses curly braces
+" tbh i never used this before, might try it later
+nmap <leader>z zfa}
+
 " Open fzf
 nmap <leader>f :Files ./<CR>
 " Lines fzf
 nmap <leader>w :BLines<CR>
 imap <C-W> <plug>(fzf-complete-line)
 
+
 " Show coc-explorer
 nmap <leader>e :CocCommand explorer <CR>
 " auto exit when explorer the only buffer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
-" netrw
-" Show explorer on new split window
+" netrw. Show explorer on new split window
 nmap <leader>o :Vexplore<CR>
 nmap <leader>p :Ex<CR>
 "autocmd VimEnter * if argc() == 0 | Explore! | endif
