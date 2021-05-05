@@ -87,7 +87,7 @@ function! LightlineBranch() abort
 endfunction
 
 function! LightlineAaatata() abort
-  return winwidth(0) > 30 ? (winwidth(0) >= 65 ? ' ' : '') : ''
+  return winwidth(0) > 30 ? (winwidth(0) >= 68 ? ' ' : '') : ''
 endfunction
 
 function! LightlineLineinfo() abort
@@ -119,5 +119,5 @@ function! LightlineFiletype() abort
     return strlen(l:branch) ? (strlen(l:branch) <= 9 ? ' ' . l:branch : '') : l:icon
   endif
 
-  return winwidth(0) >= 65 ? (strlen(&filetype) ? l:icon .' '. &filetype : l:icon) : l:icon
+  return winwidth(0) >= 68 ? l:icon .' '. &filetype : l:icon
 endfunction
