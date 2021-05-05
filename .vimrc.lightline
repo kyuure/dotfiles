@@ -35,7 +35,6 @@ let g:lightline = {
     \       'filename_modified': 'LightlineFilename',
     \       'gitbranch': 'LightlineBranch',
     \       'aaatata': 'LightlineAaatata',
-    \       'lineinfo': 'LightlineLineinfo',
     \       'percent': 'LightlinePercent',
     \       'filetype': 'LightlineFiletype',
     \   },
@@ -88,18 +87,6 @@ endfunction
 
 function! LightlineAaatata() abort
   return winwidth(0) > 30 ? (winwidth(0) >= 68 ? ' ' : '') : ''
-endfunction
-
-function! LightlineLineinfo() abort
-  if winwidth(0) < 45
-    return ''
-  endif
-
-  let l:current_line = printf('%-3s', line('.'))
-  let l:current_col  = printf('%-3s', col('.'))
-  "let l:max_line = printf('%-3s', line('$'))
-  let l:lineinfo = l:current_line . ':' . l:current_col "'/' . l:max_line
-  return l:lineinfo
 endfunction
 
 function! LightlinePercent() abort
