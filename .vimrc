@@ -21,27 +21,19 @@ set incsearch
 " the bells was like a jumpscare for me :(
 set belloff=all
 
-" sets tab size to 4 whitespaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 " converts tabs to spaces
 set expandtab
 set smartindent
-set autoindent
+set smarttab
+" sets tab size to 2 whitespaces, but it doesn't affect in Python.
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 " displaying tabs as a character
 set list
 set listchars=tab:»\ ,extends:@,precedes:^
 " so that backspace works like it used to be
 set backspace=indent,eol,start
-
-" set indent that differ from 4 spaces
-autocmd FileType bash setlocal ts=2 sts=2 sw=2
-autocmd FileType vim setlocal ts=2 sts=2 sw=2
-autocmd FileType cpp setlocal ts=2 sts=2 sw=2
-autocmd FileType css setlocal ts=2 sts=2 sw=2
-autocmd FileType html setlocal ts=2 sts=2 sw=2
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 " make one line exactly one line
 set nowrap
@@ -90,8 +82,8 @@ set hidden
 set laststatus=2
 
 " cursor line
-set cursorline
-highlight CursorLine ctermbg=Black cterm=NONE
+"set cursorline
+"highlight CursorLine ctermbg=Black cterm=NONE
 
 " don't change the background >:(;
 highlight Normal ctermbg=NONE
