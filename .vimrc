@@ -18,6 +18,8 @@ set lazyredraw
 set hlsearch
 " does searches incremenentaly
 set incsearch
+" case-insensitive
+set ignorecase
 " the bells was like a jumpscare for me :(
 set belloff=all
 

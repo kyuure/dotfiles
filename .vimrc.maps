@@ -49,6 +49,12 @@ nnoremap x "_x
 " Replace all: %s/old/new/g 
 nmap <leader>c :%s//g<Left><Left>
 
+" Connecting yank and clipboard on WSL
+" source: https://stackoverflow.com/a/46995591 (see Edit 2)
+autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' |  clip.exe')
+" Yank all, need vim-gnome
+nmap <leader>y :%y+
+
 " Fold code block uses curly braces
 " tbh i never used this before, might try it later
 nmap <leader>z zfa}
