@@ -25,6 +25,18 @@ imap <M-l> <Right>
 " Mark with ': m'
 nmap <leader>m m'
 
+" source: https://gitlab.com/T6705/dotfiles/-/blob/master/.config/nvim/mappings.vim
+" Move to beginning/end of line
+nmap H ^
+nmap L $
+vmap H ^
+vmap L $
+" keybind without going into default registry
+nnoremap x "_x
+nnoremap c "_c
+vnoremap x "_d
+vnoremap c "_c
+
 " Change window
 nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
@@ -44,8 +56,6 @@ nmap <leader>n :tabnew<bar> :Ex<CR>
 nmap <Tab> :tabnext<CR>
 
 " Delete without yank
-nmap <leader>d "_d
-nnoremap x "_x
 " Replace all: %s/old/new/g 
 nmap <leader>c :%s//g<Left><Left>
 
@@ -56,7 +66,6 @@ autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents,
 nmap <leader>y :%y+
 
 " Fold code block uses curly braces
-" tbh i never used this before, might try it later
 nmap <leader>z zfa}
 
 " Open fzf
