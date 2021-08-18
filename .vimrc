@@ -95,6 +95,9 @@ highlight Identifier ctermfg=Yellow
 highlight Comment cterm=italic
 
 
+" Command for update and upgrade plug
+" source: https://github.com/junegunn/vim-plug/wiki/faq#shouldnt-vim-plug-update-itself-on-plugupdate-like-vundle
+command! PU PlugUpdate | PlugUpgrade
 " PLUGGINS
 call plug#begin('~/.vim/plugged')
 
@@ -116,9 +119,6 @@ highlight CocFloating ctermbg=Black
 "highlight CocFloating ctermbg=White
 " CocErrorFloat CocHelperNormalFloat CocHintFloat CocInfoFloat CocWarningFloat 
 
-" emmet
-  Plug 'mattn/emmet-vim'
-
 " fzf
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
@@ -136,7 +136,8 @@ highlight CocFloating ctermbg=Black
 " NERDFonts. should i use this or hmm :(
   Plug 'ryanoasis/vim-devicons'
 
-  " emmet
+" emmet
+  Plug 'mattn/emmet-vim'
   let g:user_emmet_install_global = 0
   autocmd FileType html,css EmmetInstall
   "let g:user_emmet_mode='n'
@@ -147,6 +148,7 @@ highlight CocFloating ctermbg=Black
 "  Plug 'junegunn/gv.vim'
 
 call plug#end()
+
 
 "=== === === === === === === === === === === === === === === === === === === ===
 "  g i t
