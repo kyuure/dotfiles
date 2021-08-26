@@ -1,10 +1,4 @@
-# Create a new directory and enter it
-function mkd() {
-    mkdir -p "$@" && cd "$_";
-        
-}
-
-# danger zone
+# danger zone, only for debian based
 function dangerous() {
     echo "   $(tput setaf 1)> $(tput setaf 2)pushd ~$(tput sgr0)"
     pushd ~;
