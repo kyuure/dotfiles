@@ -27,6 +27,9 @@ sudo apt full-upgrade -y
 # Download necessary package.
 sudo apt -y install htop clang fzf bat python3 jedi
 
+# Install nodejs
+curl -sL install-node.now.sh/lts | bash
+
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
