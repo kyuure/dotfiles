@@ -26,6 +26,17 @@ sudo apt full-upgrade -y
 
 # Download necessary package.
 sudo apt -y install htop clang fzf bat python3 jedi
+
+# Install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Add undodir for vim
+cd ~/.vim
+mkdir undodir
+
+# go back to home dir
+cd
 ```
 
 ### after install a new fresh wsl
