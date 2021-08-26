@@ -33,8 +33,8 @@ vmap H ^
 vmap L $
 " keybind without going into default registry
 nnoremap x "_x
-nnoremap c "_c
 vnoremap x "_d
+nnoremap c "_c
 vnoremap c "_c
 
 " Change window
@@ -62,8 +62,6 @@ nmap <leader>c :%s//g<Left><Left>
 " Connecting yank and clipboard on WSL
 " source: https://stackoverflow.com/a/46995591 (see Edit 2)
 autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' |  clip.exe')
-" Yank all, need vim-gnome
-nmap <leader>y :%y+
 
 " Fold code block uses curly braces
 nmap <leader>z zfa}
