@@ -1,7 +1,4 @@
 # my own Aliases
-alias cdheum='cd /mnt/c/HEUM'
-alias cdlab='cd /mnt/c/HEUM/LABORATORY'
-alias cdcs='cd /mnt/c/HEUM/COMP\ SCI'
 alias v='vi'
 alias g='git'
 alias bat='batcat -n --theme TwoDark --color "always"'
@@ -10,6 +7,8 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 alias clear='colorscript random; clear'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
 
 # ls
 alias ls='ls --color=auto'
@@ -36,10 +35,11 @@ export FZF_DEFAULT_OPTS='--multi --height 50% --cycle --keep-right --reverse'
 alias Ex='explorer.exe'
 alias server-on='echo "   $(tput setaf 1)> $(tput setaf 2)python3 -m http.server$(tput sgr0)"; wslview http://localhost:8000; python3 -m http.server'
 alias ctl-on='echo "   $(tput setaf 1)> $(tput setaf 2)systemctl enable$(tput sgr0)"; systemctl enable'
+alias cdheum='cd /mnt/c/HEUM'
+alias cdlab='cd /mnt/c/HEUM/LABORATORY'
+alias cdcs='cd /mnt/c/HEUM/COMP\ SCI'
 
 # kali
-alias diff='diff --color=auto'
-alias ip='ip --color=auto'
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
 export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
