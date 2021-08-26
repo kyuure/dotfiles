@@ -112,12 +112,9 @@ call plug#begin('~/.vim/plugged')
               \   'coc-pyright',
               \   'coc-python',
               \   'coc-sh',
-              \   'coc-tsserver',
-              \   'coc-xml'
               \]
 highlight CocFloating ctermbg=Black
 "highlight CocFloating ctermbg=White
-" CocErrorFloat CocHelperNormalFloat CocHintFloat CocInfoFloat CocWarningFloat 
 
 " fzf
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -135,13 +132,6 @@ highlight CocFloating ctermbg=Black
 
 " NERDFonts. should i use this or hmm :(
   Plug 'ryanoasis/vim-devicons'
-
-" emmet
-  Plug 'mattn/emmet-vim'
-  let g:user_emmet_install_global = 0
-  autocmd FileType html,css EmmetInstall
-  "let g:user_emmet_mode='n'
-  let g:user_emmet_leader_key='<C-D>'
 
 " InTeReStInG
 "  Plug 'junegunn/goyo.vim'
