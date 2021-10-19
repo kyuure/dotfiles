@@ -9,7 +9,6 @@ execute "set <M-j>=\ej"
 execute "set <M-k>=\ek"
 execute "set <M-l>=\el"
 
-
 " Disable move using arrow in normal mode
 nmap <Up> <Nop>
 nmap <Down> <Nop>
@@ -22,8 +21,8 @@ imap <M-j> <Down>
 imap <M-k> <Up>
 imap <M-l> <Right>
 
-" Mark with ': m'
-nmap <leader>m m'
+" Go to definition: gd
+nmap <leader>d <C-O>
 
 " source: https://gitlab.com/T6705/dotfiles/-/blob/master/.config/nvim/mappings.vim
 " Move to beginning/end of line
@@ -31,11 +30,22 @@ nmap H ^
 nmap L $
 vmap H ^
 vmap L $
+
+
+" Mark with ': m'
+nmap <leader>m m'
+
+
 " keybind without going into default registry
 nnoremap x "_x
-vnoremap x "_d
 nnoremap c "_c
+nnoremap X "_X
+nnoremap C "_C
+vnoremap x "_d
 vnoremap c "_c
+vnoremap X "_D
+vnoremap C "_C
+
 
 " Change window
 nmap <leader>h <C-w>h
@@ -46,16 +56,24 @@ nmap <leader>l <C-w>l
 " Split window
 nmap <leader>sl :vsplit<CR> <C-w>w
 nmap <leader>sj :split<CR> <C-w>w
+
+
+" Open terminal
 nmap <leader>t :term<CR><C-w>k :resize 25<CR>
+
 
 " Exit
 nmap <leader>q :q<CR>
-" Newtab and explore
-nmap <leader>n :tabnew<bar> :Ex<CR>
-" Switch tab
-nmap <Tab> :tabnext<CR>
+nmap <leader>Q :qa<CR>
 
-" Delete without yank
+" Newtab and explore
+nmap <leader>n :tabnew<CR>
+
+" Switch tab
+nmap <Tab> gt
+nmap <S-Tab> gT
+
+
 " Replace all: %s/old/new/g 
 nmap <leader>c :%s//g<Left><Left>
 
@@ -63,25 +81,21 @@ nmap <leader>c :%s//g<Left><Left>
 " source: https://stackoverflow.com/a/46995591 (see Edit 2)
 autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' |  clip.exe')
 
+
 " Fold code block uses curly braces
 nmap <leader>z zfa}
 
 " Open fzf
 nmap <leader>f :Files ./<CR>
-" Lines fzf
-nmap <leader>w :BLines<CR>
-imap <C-W> <plug>(fzf-complete-line)
+" Search fzf
+nmap <leader>/ :Ag<CR>
 
 
-" Show coc-explorer
-nmap <leader>e :CocCommand explorer <CR>
-" auto exit when explorer the only buffer
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+" Show git diff
+nmap <leader>gd :Gdiffsplit<CR>
+" Show git blame
+nmap <leader>gb :Git blame<CR>
 
-" netrw. Show explorer on new split window
-nmap <leader>o :Vexplore<CR>
-nmap <leader>p :Ex<CR>
-"autocmd VimEnter * if argc() == 0 | Explore! | endif
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 50
+
+" Toggle Limelight
+nmap <leader>gl :Limelight!!<CR>

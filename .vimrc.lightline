@@ -35,6 +35,7 @@ let g:lightline = {
     \       'filename_modified': 'LightlineFilename',
     \       'gitbranch': 'LightlineBranch',
     \       'aaatata': 'LightlineAaatata',
+    \       'lineinfo': 'LightlineLineinfo',
     \       'percent': 'LightlinePercent',
     \       'filetype': 'LightlineFiletype',
     \   },
@@ -47,26 +48,28 @@ let g:lightline = {
 "=== === === === === === === === === === === === === === === === === === === ===
 function! LightlineMode() abort
   let l:ftmap = {
-              \ 'coc-explorer': 'EXPLORER',
               \ 'netrw': 'EXPLORER',
+              \ 'coc-explorer': 'EXPLORER',
+              \ 'fugitiveblame': 'blame',
               \}
   return get(l:ftmap, &filetype, lightline#mode())
 endfunction
 
 function! LightlineModeEx() abort
   let l:ftmap = {
-              \ 'coc-explorer': 'EXPLORER',
               \ 'netrw': 'EXPLORER',
+              \ 'coc-explorer': 'EXPLORER',
+              \ 'fugitiveblame': 'blame',
               \}
   return get(l:ftmap, &filetype, '')
 endfunction
 
 function! LightlineReadonly() abort
-  return winwidth(0) >= 44 ? (&readonly ? '' : '') : ''
+  return &readonly ? '' : ''
 endfunction
 
 function! LightlineFilename()
-  if &filetype ==# 'coc-explorer' || &filetype ==# 'netrw'
+  if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer' || &filetype ==# 'fugitiveblame'
     return ''
   endif
 
@@ -77,11 +80,11 @@ function! LightlineFilename()
 endfunction
 
 function! LightlineBranch() abort
-  if &filetype ==# 'coc-explorer' || &filetype ==# 'netrw'
+  if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer'
     return ''
   endif
 
-  let l:branch = gitbranch#name()
+  let l:branch = fugitive#head()
   return strlen(l:branch) ? (winwidth(0) >= 65 ? ' ' . l:branch : '') : ''
 endfunction
 
@@ -98,10 +101,22 @@ function! LightlinePercent() abort
   return printf('%-4s', l:percent)
 endfunction
 
+function! LightlineLineinfo() abort
+  if winwidth(0)< 45 || &filetype ==# 'netrw' || &filetype ==# 'coc-explorer'
+    return ''
+  endif
+
+  return printf("%3d:%-2d", line('.'), col('.'))
+endfunction
+
 function! LightlineFiletype() abort
+  if &filetype ==# 'fugitiveblame'
+    return ''
+  endif
+
   let l:icon = WebDevIconsGetFileTypeSymbol()
 
-  if &filetype ==# 'coc-explorer'
+  if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer' || &filetype ==# 'fugitiveblame'
     let l:branch = gitbranch#name()
     return strlen(l:branch) ? (strlen(l:branch) <= 9 ? ' ' . l:branch : '') : l:icon
   endif
