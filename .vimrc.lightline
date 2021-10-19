@@ -117,7 +117,7 @@ function! LightlineFiletype() abort
   let l:icon = WebDevIconsGetFileTypeSymbol()
 
   if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer' || &filetype ==# 'fugitiveblame'
-    let l:branch = gitbranch#name()
+    let l:branch = fugitive#head()
     return strlen(l:branch) ? (strlen(l:branch) <= 9 ? ' ' . l:branch : '') : l:icon
   endif
 
