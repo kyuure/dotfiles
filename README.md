@@ -5,7 +5,7 @@ I made this repo so that I can backup my dotfiles easily.
 
 
 ## what i use
-Kali WSL2.
+Kali WSL2. (but it is compatible with OSX because i use that lately)
 
 _why?_ hmm🤔
 
