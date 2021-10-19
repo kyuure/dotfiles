@@ -6,12 +6,12 @@ alias tree='tree -C'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-alias clear='colorscript random; clear'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
+alias clear='colorscript random; clear'
 
 # ls
-alias ls='ls --color=auto'
+alias ls='ls -G --color=auto'
 alias ll='ls -alFh'
 
 # grep
@@ -38,12 +38,3 @@ alias ctl-on='echo "   $(tput setaf 1)> $(tput setaf 2)systemctl enable$(tput sg
 alias cdheum='cd /mnt/c/HEUM'
 alias cdlab='cd /mnt/c/HEUM/LABORATORY'
 alias cdcs='cd /mnt/c/HEUM/COMP\ SCI'
-
-# kali
-export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
-export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
-export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-export LESS_TERMCAP_so=$'\E[01;33m'    # begin reverse video
-export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
