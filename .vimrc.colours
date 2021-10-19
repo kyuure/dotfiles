@@ -1,0 +1,32 @@
+" cursor line
+set cursorline
+highlight CursorLine ctermbg=Black cterm=NONE
+
+" don't change the background >:(;
+highlight Normal ctermbg=NONE
+
+highlight LineNr ctermfg=Magenta
+highlight Statement ctermfg=Blue
+highlight Identifier ctermfg=Yellow
+highlight Comment cterm=italic
+highlight Visual cterm=reverse ctermbg=Black
+highlight Search ctermbg=DarkBlue
+highlight SpecialKey ctermbg=Black ctermfg=DarkBlue
+highlight Folded ctermbg=DarkBlue ctermfg=Grey
+
+" for vim-fugitive
+highlight DiffAdd ctermbg=DarkGrey ctermfg=DarkGreen cterm=bold
+highlight DiffChange ctermbg=DarkGrey ctermfg=NONE
+highlight DiffDelete ctermbg=DarkGrey ctermfg=DarkRed cterm=bold
+highlight DiffText ctermbg=DarkYellow ctermfg=NONE cterm=bold
+
+" for coc.nvim
+highlight CocFloating ctermbg=Black
+
+" for golang
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1

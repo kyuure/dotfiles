@@ -1,0 +1,21 @@
+" Show coc-explorer
+nmap <leader>p :CocCommand explorer <CR>
+" nwtre. Show explorer on current buffer window
+nmap <leader>o :Ex<CR>
+" opentab and coc-explorer
+nmap <leader>n :tabnew<bar> :CocCommand explorer <CR>
+
+
+" auto open coc-explorer on left side
+" Source: https://github.com/weirongxu/coc-explorer/issue/89#issuecomment-606374700
+let g:loaded_netrw = 1
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * CocCommand explorer
+augroup END
+
+
+" auto exit when netrw is the only buffer
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'netrw') | q | endif
+" auto exit when explorer is the only buffer
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
