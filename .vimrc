@@ -159,7 +159,9 @@ call plug#end()
 "=== === === === === === === === === === === === === === === === === === === ===
 " IMPORTS
 "=== === === === === === === === === === === === === === === === === === === ===
+source ~/.vimrc.fold
 source ~/.vimrc.lightline
+source ~/.vimrc.webdevicons
 source ~/.vimrc.maps
 source ~/.vimrc.colours
 source ~/.vimrc.coc-explorer
