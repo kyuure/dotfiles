@@ -4,15 +4,14 @@ highlight CursorLine ctermbg=Black cterm=NONE
 
 " don't change the background >:(;
 highlight Normal ctermbg=NONE
-
 highlight LineNr ctermfg=Magenta
-highlight Statement ctermfg=Blue
-highlight Identifier ctermfg=Yellow
-highlight Comment cterm=italic
+highlight Statement ctermfg=Yellow
+highlight Identifier ctermfg=Blue
+highlight Comment ctermfg=DarkBlue cterm=italic
 highlight Visual cterm=reverse ctermbg=Black
 highlight Search ctermbg=DarkBlue
 highlight SpecialKey ctermbg=Black ctermfg=DarkBlue
-highlight Folded ctermbg=DarkBlue ctermfg=Grey
+highlight Folded ctermbg=Black ctermfg=Green
 
 " for vim-fugitive
 highlight DiffAdd ctermbg=DarkGrey ctermfg=DarkGreen cterm=bold
