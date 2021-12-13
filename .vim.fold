@@ -1,0 +1,9 @@
+" Source: https://stackoverflow.com/q/5316334
+"         https://vi.stackexchange.com/a/21863
+"         https://coderwall.com/p/usd_cw/a-pretty-vim-foldtext-function
+
+" enable fold
+set foldenable
+set foldlevelstart=99
+set fcs=fold:\ ,vert:\|
+set foldtext='\ ['.repeat('\ ',strlen(string(line('$')))-strlen(string(v:foldend-v:foldstart+1))).(v:foldend-v:foldstart+1).'\ ]\ ::\ '.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
