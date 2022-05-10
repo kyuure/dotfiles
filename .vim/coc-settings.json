@@ -41,7 +41,7 @@
 
     "clangd.path": "/home/kyuure/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
 
-    "explorer.width": 32,
+    "explorer.width": 27,
     "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
     "explorer.file.root.template": "[icon & 1] [root]",
     "explorer.file.child.template": " [git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
