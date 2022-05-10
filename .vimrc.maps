@@ -88,7 +88,11 @@ nmap <leader>z zfa}
 " Open fzf
 nmap <leader>f :Files ./<CR>
 " Search fzf
-nmap <leader>/ :Ag<CR>
+nmap <leader>/ :Rg<CR>
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --hidden --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 
 " Show git diff

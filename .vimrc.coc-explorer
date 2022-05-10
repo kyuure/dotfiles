@@ -7,8 +7,7 @@ nmap <leader>n :tabnew<bar> :CocCommand explorer <CR>
 
 
 " auto open coc-explorer on left side
-" Source: https://github.com/weirongxu/coc-explorer/issue/89#issuecomment-606374700
-let g:loaded_netrw = 1
+" Source: https://github.com/weirongxu/coc-explorer/issues/89#issuecomment-606374700
 augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * CocCommand explorer
@@ -16,6 +15,6 @@ augroup END
 
 
 " auto exit when netrw is the only buffer
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'netrw') | q | endif
+"autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'netrw') | q | endif
 " auto exit when explorer is the only buffer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

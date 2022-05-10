@@ -7,7 +7,7 @@ highlight Normal ctermbg=NONE
 highlight LineNr ctermfg=Magenta
 highlight Statement ctermfg=Yellow
 highlight Identifier ctermfg=Blue
-highlight Comment ctermfg=DarkBlue cterm=italic
+highlight Comment ctermfg=DarkGrey cterm=italic
 highlight Visual cterm=reverse ctermbg=Black
 highlight Search ctermbg=DarkBlue
 highlight SpecialKey ctermbg=Black ctermfg=DarkBlue

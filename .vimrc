@@ -114,7 +114,6 @@ call plug#begin('~/.vim/plugged')
               \   'coc-html',
               \   'coc-json',
               \   'coc-pyright',
-              \   'coc-python',
               \   'coc-sh',
               \]
 
@@ -130,6 +129,7 @@ call plug#begin('~/.vim/plugged')
 " fzf
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  "let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 " auto pairs
   Plug 'jiangmiao/auto-pairs'
@@ -161,7 +161,6 @@ call plug#end()
 "=== === === === === === === === === === === === === === === === === === === ===
 source ~/.vimrc.fold
 source ~/.vimrc.lightline
-source ~/.vimrc.webdevicons
 source ~/.vimrc.maps
 source ~/.vimrc.colours
 source ~/.vimrc.coc-explorer
