@@ -133,6 +133,7 @@ call plug#begin('~/.vim/plugged')
 
 " auto pairs
   Plug 'jiangmiao/auto-pairs'
+  let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '```':'```', '"""':'"""', "'''":"'''", "`":"`", "<":">"}
 
 " git for vim
   Plug 'tpope/vim-fugitive'
