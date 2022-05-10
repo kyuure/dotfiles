@@ -7,28 +7,27 @@ I made this repo so that I can backup my dotfiles easily.
 ## what i use
 Kali WSL2. (but it is compatible with OSX because i use that lately)
 
-_why?_ hmm🤔
-
 
 ## what i do
 
 ### to install it to my env
 ```sh
-# Download the resource.
+# Download the resource
 cd
 curl -#L https://github.com/kyuure/dotfiles/tarball/main \
   | tar xzv --strip-components 1 \
     --exclude={README.md,.screenshot,.win_terminal}
 
-# Update package.
+# Update package
 sudo apt update -y
 sudo apt full-upgrade -y
 
-# Download necessary package.
-sudo apt -y install htop clang fzf bat python3 jedi
+# Download necessary package
+sudo apt -y install htop clang fzf bat python3 python3-pip ripgrep tree tig
+pip install jedi
 
 # Install nodejs
-curl -sL install-node.now.sh/lts | bash
+sudo curl -sL install-node.now.sh/lts | bash
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -38,21 +37,17 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 cd ~/.vim
 mkdir undodir
 
-# go back to home dir
+# Go back to home dir
 cd
-```
 
-### after install a new fresh wsl
-```sh
-#sudo apt install exuberant-ctags
-#sudo apt install strace ltrace
-#sudo apt install iotop
-#sudo apt install iostat vmstat
+# Install vim plugins
+vim +PlugInstall +qall
 
-# Source: https://github.com/wslutilities/wslu
-sudo apt install gnupg2 apt-transport-https
-wget -O - https://access.patrickwu.space/wslu/public.asc | sudo apt-key add -
-echo "deb https://access.patrickwu.space/wslu/debian buster main" | sudo tee -a /etc/apt/sources.list
-sudo apt update
-sudo apt install wslu
+# Setup git
+git config --global user.name "my-name"
+git config --global user.email "my-email"
+
+# Setup SHH Key
+ssh-keygen -t rsa -C "my-email"
+ssh -T git@github.com
 ```
