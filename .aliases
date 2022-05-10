@@ -8,7 +8,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-alias clear='colorscript random; clear'
 
 # ls
 alias ls='ls -G --color=auto'
