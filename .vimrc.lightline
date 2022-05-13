@@ -84,7 +84,7 @@ function! LightlineBranch() abort
     return ''
   endif
 
-  let l:branch = fugitive#head()
+  let l:branch = FugitiveHead()
   return strlen(l:branch) ? (winwidth(0) >= 65 ? ' ' . l:branch : '') : ''
 endfunction
 
@@ -117,7 +117,7 @@ function! LightlineFiletype() abort
   let l:icon = WebDevIconsGetFileTypeSymbol()
 
   if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer' || &filetype ==# 'fugitiveblame'
-    let l:branch = fugitive#head()
+    let l:branch = FugitiveHead()
     return strlen(l:branch) ? (strlen(l:branch) <= 9 ? ' ' . l:branch : '') : l:icon
   endif
 
