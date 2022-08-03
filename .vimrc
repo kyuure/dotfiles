@@ -133,7 +133,10 @@ call plug#begin('~/.vim/plugged')
 
 " auto pairs
   Plug 'jiangmiao/auto-pairs'
-  let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '```':'```', '"""':'"""', "'''":"'''", "`":"`", "<":">", "/*":"*/"}
+  let g:AutoPairsShortcutFastWrap = '<M-s>'
+  au FileType html let b:AutoPairs = AutoPairsDefine({'<!--':'-->', '/*':'*/'})
+  au FileType tex let b:AutoPairs = AutoPairsDefine({'$':'$'})
+  au FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
 
 " git for vim
   Plug 'tpope/vim-fugitive'
