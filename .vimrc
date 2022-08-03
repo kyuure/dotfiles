@@ -114,6 +114,7 @@ call plug#begin('~/.vim/plugged')
               \   'coc-html',
               \   'coc-json',
               \   'coc-pyright',
+              \   'coc-solargraph',
               \   'coc-sh',
               \]
 

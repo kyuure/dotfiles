@@ -48,5 +48,8 @@
     "explorer.file.showHiddenFiles": true,
     "explorer.file.reveal.auto": false,
     "explorer.icon.enableNerdfont": true,
-    "explorer.previewAction.onHover": false
+    "explorer.previewAction.onHover": false,
+
+    "codeLens.enable": true,
+    "solargraph.useBundler": true
 }
