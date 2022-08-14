@@ -43,6 +43,12 @@ cd
 # Install vim plugins
 vim +PlugInstall +qall
 
+# Append fzf keybind to ~/.bashrc
+cat >> ~/.bashrc <<EOL
+# enable ctrl-r fzf
+source /usr/share/doc/fzf/examples/key-bindings.bash
+EOL
+
 # Setup git
 git config --global user.name "my-name"
 git config --global user.email "my-email"
