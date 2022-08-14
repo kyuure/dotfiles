@@ -10,7 +10,7 @@ Kali WSL2. (but it is compatible with OSX since i use that lately)
 
 ## what i do
 
-### to install it to my env
+### to install it to my Linux-like env
 ```sh
 # Download the resource
 cd
@@ -48,7 +48,40 @@ cat >> ~/.bashrc <<EOL
 # enable ctrl-r fzf
 source /usr/share/doc/fzf/examples/key-bindings.bash
 EOL
+```
 
+### to install it to my OSX-like env
+```sh
+# Download the resource
+cd
+curl -#L https://github.com/kyuure/dotfiles/tarball/main \
+  | tar xzv --strip-components 1 \
+    --exclude={README.md,.screenshot,.win_terminal}
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Download necessary package
+brew install htop fzf bat ripgrep tree tig node tmux
+/usr/local/opt/fzf/install
+
+# Install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Add undodir for vim
+cd ~/.vim
+mkdir undodir
+
+# Go back to home dir
+cd
+
+# Install vim plugins
+vim +PlugInstall +qall
+```
+
+### setup git and ssh
+```sh
 # Setup git
 git config --global user.name "my-name"
 git config --global user.email "my-email"
