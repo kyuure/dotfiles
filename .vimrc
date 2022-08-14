@@ -169,3 +169,4 @@ source ~/.vim/rc/.vimrc.lightline
 source ~/.vim/rc/.vimrc.maps
 source ~/.vim/rc/.vimrc.colors
 source ~/.vim/rc/.vimrc.coc-explorer
+source ~/.vim/rc/.vimrc.coc
