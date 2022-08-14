@@ -38,6 +38,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# enable ctrl-r fzf
-source /usr/share/doc/fzf/examples/key-bindings.bash
