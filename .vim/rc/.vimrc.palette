@@ -16,10 +16,19 @@ highlight Identifier ctermfg=Blue
 highlight Comment ctermfg=DarkGrey cterm=italic
 
 "highlight Visual cterm=reverse ctermbg=Black
-highlight Visual cterm=16
+highlight Visual ctermbg=16
 highlight Search ctermbg=Grey ctermfg=Black
 highlight SpecialKey ctermfg=233
 highlight Folded ctermbg=Black ctermfg=Green
+
+highlight Pmenu ctermbg=NONE ctermfg=White
+highlight PmenuSel ctermbg=16 ctermfg=White
+highlight PmenuKind ctermbg=NONE ctermfg=DarkYellow
+highlight PmenuKindSel ctermbg=16 ctermfg=DarkYellow
+highlight PmenuExtra ctermbg=NONE ctermfg=Magenta
+highlight PmenuExtraSel ctermbg=16 ctermfg=Magenta
+highlight PmenuSbar ctermbg=DarkGrey
+highlight PmenuThumb ctermbg=Grey
 
 " for vim-fugitive
 highlight DiffAdd ctermbg=DarkGrey ctermfg=DarkGreen cterm=bold
@@ -36,4 +45,12 @@ let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
+let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 1

@@ -39,10 +39,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# for fzf keybind
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # for tmux bash history
-# Avoid duplication
+# Avoid duplicates
 HISTCONTROL=ignoredups:erasedups # Ubuntu default is ignoreboth
 # When the shell exits, append to the history file instead of overwriting it
-shopt -s histappend  # In Ubuntu this is already set by  default
+shopt -s histappend  # In Ubuntu this is already set by default
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"

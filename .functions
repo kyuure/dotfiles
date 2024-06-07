@@ -1,10 +1,10 @@
 # tmux ide-like
 setup-tmux() {
-    # Sauce: https://blog.inkdrop.app/my-dev-workflow-using-tmux-vim-video-e30e78a9acce
-    tmux split-window -v -p 28
-    #tmux split-window -h
-    tmux select-pane -U
-    tmux rename-window workspace
+  # Sauce: https://blog.inkdrop.app/my-dev-workflow-using-tmux-vim-video-e30e78a9acce
+  tmux split-window -v -p 28
+  #tmux split-window -h
+  tmux select-pane -U
+  tmux rename-window workspace
 }
 
 # git info
@@ -16,7 +16,7 @@ ginf() {
         return 0
     fi
 
-    # check for git status
+    # Check for git status
     git_status="$(git status --porcelain --branch)"
     git_dir="$(git rev-parse --git-dir 2>/dev/null)"
 
@@ -28,18 +28,18 @@ ginf() {
         status="${line:0:2}"
         while [[ -n ${status}  ]]; do
             case "${status}" in
-                # two fixed character matches, loop finished
+                # Two fixed character matches, loop finished
                 \#\#) branch_line="${line/\.\.\./^}"; break ;;
                 \?\?) ((num_untracked++)); break ;;
                 U?) ((num_conflicts++)); break;;
                 ?U) ((num_conflicts++)); break;;
                 DD) ((num_conflicts++)); break;;
                 AA) ((num_conflicts++)); break;;
-                # two character matches, first loop
+                # Two character matches, first loop
                 ?M) ((num_changed++)) ;;
                 ?D) ((num_changed++)) ;;
                 ?\ ) ;;
-                # single character matches, second loop
+                # Single character matches, second loop
                 U) ((num_conflicts++)) ;;
                 \ ) ;;
                 *) ((num_staged++)) ;;

@@ -16,7 +16,7 @@ augroup END
 
 
 " NO LONGER WORKS ON v9.0.0; IT GOT FIXED!!; it didn't...
-" an alternatife solution: https://groups.google.com/g/vim_dev/c/Cw8McBH6DDM/m/-O7UhK_OAgAJ
+" an alternate solution: https://groups.google.com/g/vim_dev/c/Cw8McBH6DDM/m/-O7UhK_OAgAJ
 " auto exit when netrw is the only buffer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'netrw') | call feedkeys(":quit\<CR>:\<BS>") | endif
 " auto exit when explorer is the only buffer

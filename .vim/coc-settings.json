@@ -1,70 +1,91 @@
 {
-    "coc.preferences.extensionUpdateCheck": "weekly",
+  "coc.preferences.extensionUpdateCheck": "weekly",
 
-    "diagnostic.checkCurrentLine": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "●",
 
-    "diagnostic.errorSign": "✘",
-    "diagnostic.warningSign": "",
-    "diagnostic.infoSign": "",
+  "explorer.width": 27,
+  "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
+  "explorer.file.root.template": "[icon & 1] [root]",
+  "explorer.file.child.template": " [git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
+  "explorer.file.showHiddenFiles": true,
+  "explorer.file.reveal.auto": false,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.source": "vim-devicons",
+  "explorer.previewAction.onHover": false,
+  "explorer.root.strategies": ["workspace", "custom:vcs", "custom:vcs-r"],
 
-    "explorer.width": 27,
-    "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
-    "explorer.file.root.template": "[icon & 1] [root]",
-    "explorer.file.child.template": " [git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
-    "explorer.file.showHiddenFiles": true,
-    "explorer.file.reveal.auto": false,
-    "explorer.icon.enableNerdfont": true,
-    "explorer.icon.source": "vim-devicons",
-    "explorer.previewAction.onHover": false,
-    "explorer.root.strategies": ["workspace","custom:vcs","custom:vcs-r"],
+  "python.linting.enabled": false,
+  "python.pythonPath": "python3",
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes": false,
 
-    "python.linting.enabled": true,
-    "python.pythonPath": "python3",
-    "python.inlayHints.functionReturnTypes": false,
-    "python.inlayHints.variableTypes": false,
-    "python.linting.pylintEnabled": true,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    }
+  },
+  "go.goplsOptions": {
+    "staticcheck": true
+  },
 
-    "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "rootPatterns": ["go.mod"],
-            "filetypes": ["go"]
-        }
-    },
-    "go.goplsOptions": {
-        "staticcheck": true
-    },
 
-    "suggest.completionItemKindLabels": {
-        "keyword": "\uf1de",
-        "variable": "\ue79b",
-        "value": "\uf89f",
-        "operator": "\u03a8",
-        "function": "\u0192",
-        "reference": "\ufa46",
-        "constant": "\uf8fe",
-        "method": "\uf09a",
-        "struct": "\ufb44",
-        "class": "\uf0e8",
-        "interface": "\uf417",
-        "text": "\ue612",
-        "enum": "\uf435",
-        "enumMember": "\uf02b",
-        "module": "\uf40d",
-        "color": "\ue22b",
-        "property": "\ue624",
-        "field": "\ue624",
-        "unit": "\uf475",
-        "event": "\ufacd",
-        "file": "\uf723",
-        "folder": "\uf114",
-        "snippet": "\ue60b",
-        "typeParameter": "\uf728",
-        "default": "\uf29c"
-    },
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "highlight": "NONE",
+    "borderhighlight": "LineNr"
+  },
+  "diagnostic.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "highlight": "NONE",
+    "borderhighlight": "LineNr"
+  },
+  "signature.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "highlight": "NONE",
+    "borderhighlight": "LineNr"
+  },
+  "hover.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "highlight": "NONE",
+    "borderhighlight": "LineNr"
+  },
 
-    "clangd.path": "/home/kyuure/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
-
-    "codeLens.enable": true,
-    "solargraph.useBundler": true
+  "suggest.completionItemKindLabels": {
+    "keyword": "\uf1de",
+    "variable": "\ue79b",
+    "value": "\uf89f",
+    "operator": "\u03a8",
+    "constructor": "\uf0ad",
+    "function": "\u0192",
+    "reference": "\ufa46",
+    "constant": "\uf8fe",
+    "method": "\uf09a",
+    "struct": "\ufb44",
+    "class": "\uf0e8",
+    "interface": "\uf417",
+    "text": "\ue612",
+    "enum": "\uf435",
+    "enumMember": "\uf02b",
+    "module": "\uf40d",
+    "color": "\ue22b",
+    "property": "\ue624",
+    "field": "\uf9be",
+    "unit": "\uf475",
+    "event": "\ufacd",
+    "file": "\uf723",
+    "folder": "\uf114",
+    "snippet": "\ue60b",
+    "typeParameter": "\uf728",
+    "default": "\uf29c"
+  },
 }

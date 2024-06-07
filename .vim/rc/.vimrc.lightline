@@ -29,12 +29,12 @@ let g:lightline = {
     \   },
     \   'tabline': {
     \       'left': [ [ 'tabs' ] ],
-    \       'right': [ [ 'close' ] ],
+    \       'right': [ [ 'close'] ]
     \   },
     \   'tab': {
     \       'active': [ 'filename', 'modified' ],
-    \       'inactive': [ 'filename', 'modified' ],
-    \   }
+    \       'inactive': [ 'filename', 'modified' ]
+    \   },
     \   'component_function': {
     \       'mode': 'LightlineMode',
     \       'mode_explorer': 'LightlineModeEx',
@@ -51,7 +51,7 @@ let g:lightline = {
     \       'modified': 'lightline#tab#modified',
     \       'readonly': 'lightline#tab#readonly',
     \       'tabnum': 'lightline#tab#tabnum',
-    \   }
+    \   },
     \   'separator': { 'left': '', 'right': ''  },
     \   'subseparator': { 'left': '', 'right': ''  },
     \ }
@@ -78,7 +78,7 @@ function! LightlineModeEx() abort
 endfunction
 
 function! LightlineReadonly() abort
-  return &readonly ? '' : ''
+  return &readonly ? '' : ''
 endfunction
 
 function! LightlineFilename()
@@ -92,12 +92,12 @@ function! LightlineFilename()
   return l:filename . l:modified
 endfunction
 
-function! LightLineTab(n) abort
+function! LightlineTab(n) abort
   let buflist = tabpagebuflist(a:n)
   let winnr = tabpagewinnr(a:n)
 
   let l:filetype = getbufvar(buflist[winnr - 1], '&filetype')
-  let l:filename = expand('#'.buflist[winnr = 1].':t')
+  let l:filename = expand('#'.buflist[winnr - 1].':t')
   let l:icon = WebDevIconsGetFileTypeSymbol(l:filename)
 
   if l:filetype ==# 'netrw' || l:filetype ==# 'coc-explorer' || l:filetype ==# 'fugitiveblame'
@@ -115,7 +115,7 @@ function! LightlineBranch() abort
   if l:branch ==# 'master' || l:branch ==# 'main'
     let l:branch_symbol = ''
   else
-    let l:branch_symbol = 'b'
+    let l:branch_symbol = '⎇'
   endif
 
   return strlen(l:branch) ? (winwidth(0) >= 85 ? l:branch_symbol . ' ' . l:branch : l:branch_symbol) : ''
@@ -135,7 +135,7 @@ function! LightlinePercent() abort
 endfunction
 
 function! LightlineLineinfo() abort
-  if winwidth(0)< 45 || &filetype ==# 'netrw' || &filetype ==# 'coc-explorer'
+  if winwidth(0) < 45 || &filetype ==# 'netrw' || &filetype ==# 'coc-explorer'
     return ''
   endif
 
@@ -151,14 +151,13 @@ function! LightlineFiletype() abort
 
   if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer' || &filetype ==# 'fugitiveblame'
     let l:branch = FugitiveHead()
-
-    if l:branch ==# 'master || l:branch ==# 'main'
+    if l:branch ==# 'master' || l:branch ==# 'main'
       let l:branch_symbol = ''
     else
-      let l:branch_symbol = 'b'
+      let l:branch_symbol = '⎇'
     endif
     return strlen(l:branch) ? l:branch_symbol : l:icon
   endif
 
-  return winwidth(0) >= 65 ? l:icon . ' ' . &filetype : l:icon
+  return winwidth(0) >= 65 ? l:icon .' '. &filetype : l:icon
 endfunction

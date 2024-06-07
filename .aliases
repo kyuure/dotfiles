@@ -13,7 +13,7 @@ alias ip='ip --color=auto'
 # ls
 alias ls='ls -G --color=auto'
 alias ll='ls -alFh'
-#alias ll='exa =lga ==icons'
+#alias ll='exa -lga --icons'
 
 # cd
 alias cdworkspace='cd ~/workspace'

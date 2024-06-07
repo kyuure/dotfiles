@@ -16,7 +16,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# enable italic
+# Enable italic
 export TERM=xterm-256color-italic
 
 # set golang env

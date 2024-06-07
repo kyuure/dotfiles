@@ -12,7 +12,7 @@
 " change this from nv to a because coc.nvim can scroll through float window by using mouse
 " well, it can scroll with keyboard (see https://github.com/neoclide/coc.nvim/issue/609
 " and htpps://github.com/neoclide/coc.nvim/discussions/2472), but i dont have time
-" to change  atm.
+" to change it atm.
 set mouse=a
 " scroll when i'm 5 away from the edge
 set scrolloff=5
@@ -45,7 +45,7 @@ set softtabstop=2
 set shiftwidth=2
 " displaying tabs as a character
 set list
-set listchars=tab:»\ leadmultispace:|\ ,extends:>,precedes:<,trail:-
+set listchars=tab:»\ ,leadmultispace:│\ ,extends:>,precedes:<,trail:-
 
 " so that backspace works like it used to be
 set backspace=indent,eol,start
@@ -115,6 +115,7 @@ call plug#begin('~/.vim/plugged')
               "\   'coc-ansible',
               \   'coc-clangd',
               \   'coc-css',
+              \   'coc-docker',
               \   'coc-explorer',
               \   'coc-go',
               \   'coc-html',
@@ -147,7 +148,7 @@ call plug#begin('~/.vim/plugged')
   let g:AutoPairsShortcutFastWrap = '<M-s>'
   au FileType html let b:AutoPairs = AutoPairsDefine({'<!--':'-->', '/*':'*/'})
   au FileType tex let b:AutoPairs = AutoPairsDefine({'$':'$'})
-  au FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|'})
+  au FileType ruby let b:AutoPairs = AutoPairsDefine({'|':'|', '<%':'%>'})
 
 " git for vim
   Plug 'tpope/vim-fugitive'
@@ -177,6 +178,6 @@ call plug#end()
 source ~/.vim/rc/.vimrc.fold
 source ~/.vim/rc/.vimrc.lightline
 source ~/.vim/rc/.vimrc.maps
-source ~/.vim/rc/.vimrc.palette
 source ~/.vim/rc/.vimrc.coc-explorer
+source ~/.vim/rc/.vimrc.palette
 source ~/.vim/rc/.vimrc.coc
