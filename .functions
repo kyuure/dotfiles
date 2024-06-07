@@ -1,19 +1,10 @@
-# danger zone, only for debian based
-function dangerous() {
-    echo "   $(tput setaf 1)> $(tput setaf 2)pushd ~$(tput sgr0)"
-    pushd ~;
-    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt update$(tput sgr0)"
-    sudo apt update -y;
-    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt upgrade$(tput sgr0)"
-    sudo apt upgrade -y;
-    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt autoremove$(tput sgr0)"
-    sudo apt autoremove;
-    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt autoclean$(tput sgr0)"
-    sudo apt autoclean;
-    echo "   $(tput setaf 1)> $(tput setaf 2)sudo apt clean$(tput sgr0)"
-    sudo apt clean;
-    echo "   $(tput setaf 1)> $(tput setaf 2)popd$(tput sgr0)"
-    popd;
+# tmux ide-like
+setup-tmux() {
+    # Sauce: https://blog.inkdrop.app/my-dev-workflow-using-tmux-vim-video-e30e78a9acce
+    tmux split-window -v -p 28
+    #tmux split-window -h
+    tmux select-pane -U
+    tmux rename-window workspace
 }
 
 # git info
@@ -37,18 +28,18 @@ ginf() {
         status="${line:0:2}"
         while [[ -n ${status}  ]]; do
             case "${status}" in
-                #two fixed character matches, loop finished
+                # two fixed character matches, loop finished
                 \#\#) branch_line="${line/\.\.\./^}"; break ;;
                 \?\?) ((num_untracked++)); break ;;
                 U?) ((num_conflicts++)); break;;
                 ?U) ((num_conflicts++)); break;;
                 DD) ((num_conflicts++)); break;;
                 AA) ((num_conflicts++)); break;;
-                #two character matches, first loop
+                # two character matches, first loop
                 ?M) ((num_changed++)) ;;
                 ?D) ((num_changed++)) ;;
                 ?\ ) ;;
-                #single character matches, second loop
+                # single character matches, second loop
                 U) ((num_conflicts++)) ;;
                 \ ) ;;
                 *) ((num_staged++)) ;;

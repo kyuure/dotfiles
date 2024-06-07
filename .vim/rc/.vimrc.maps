@@ -2,26 +2,11 @@
 let mapleader = " " "now <leader> is same as <space> lols.
 
 
-" to use Alt in insert mode
-" source: https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
-execute "set <M-h>=\eh"
-execute "set <M-j>=\ej"
-execute "set <M-k>=\ek"
-execute "set <M-l>=\el"
-execute "set <M-s>=\es"
-execute "set <M-n>=\en"
-
 " Disable move using arrow in normal mode
 nmap <Up> <Nop>
 nmap <Down> <Nop>
 nmap <Left> <Nop>
 nmap <Right> <Nop>
-
-" Move in insert mode
-imap <M-h> <Left>
-imap <M-j> <Down>
-imap <M-k> <Up>
-imap <M-l> <Right>
 
 " Go to definition: gd
 nmap <leader>d <C-O>
@@ -32,11 +17,6 @@ nmap H ^
 nmap L $
 vmap H ^
 vmap L $
-
-nnoremap J <C-D>
-nnoremap K <C-U>
-vnoremap J <C-D>
-vnoremap K <C-U>
 
 
 " Mark with ': m'
@@ -65,10 +45,6 @@ nmap <leader>sl :vsplit<CR> <C-w>w
 nmap <leader>sj :split<CR> <C-w>w
 
 
-" Open terminal
-nmap <leader>t :term<CR><C-w>k :resize 25<CR>
-
-
 " Exit
 nmap <leader>q :q<CR>
 nmap <leader>Q :qa<CR>
@@ -82,7 +58,7 @@ nmap <S-Tab> gT
 
 
 " Replace all: %s/old/new/g 
-nmap <leader>c :%s//g<Left><Left>
+nmap <leader>ra :%s//g<Left><Left>
 
 " Connecting yank and clipboard on WSL
 " source: https://stackoverflow.com/a/46995591 (see Edit 2)

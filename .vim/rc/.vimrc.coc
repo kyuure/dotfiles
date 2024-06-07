@@ -1,20 +1,18 @@
 " Completion vimrc
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+"inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> cd <Plug>(coc-definition)
+nmap <silent> ct <Plug>(coc-type-definition)
+nmap <silent> ci <Plug>(coc-implementation)
+nmap <silent> cr <Plug>(coc-references)
 
 " Use C to show documentation in preview window.
-nnoremap <silent> C :call ShowDocumentation()<CR>
+nnoremap <silent> K :call ShowDocumentation()<CR>
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
     call CocActionAsync('doHover')
-  else
-    call feedkeys('C', 'in')
   endif
 endfunction
 
@@ -23,7 +21,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>ce  :<C-u>CocList diagnostics<cr>
 " Find symbol of current document.
 "nnoremap <silent><nowait> <leader>co  :<C-u>CocList outline<cr>
 " Search workspace symbols.

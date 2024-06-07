@@ -22,3 +22,16 @@
 # Backup files
 *.bak
 *.swp
+
+# Temp files
+*.temp
+*.tmp
+*.backup
+*.bak
+
+# Vim files
+*.vimrc
+
+# Secret files
+*secrets.sh
+*certs/*

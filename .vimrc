@@ -31,6 +31,10 @@ set ignorecase
 
 " for syntax highlights
 syntax on
+" set background
+set background=dark
+" set colorscheme
+colorscheme wildcharm
 
 " converts tabs to spaces
 set expandtab
@@ -41,7 +45,8 @@ set softtabstop=2
 set shiftwidth=2
 " displaying tabs as a character
 set list
-set listchars=tab:»\ ,extends:>,precedes:<,trail:-
+set listchars=tab:»\ leadmultispace:|\ ,extends:>,precedes:<,trail:-
+
 " so that backspace works like it used to be
 set backspace=indent,eol,start
 " smart indent
@@ -65,7 +70,7 @@ set encoding=UTF-8
 " enable plugin for abbreviations [:ab] and netrw
 filetype plugin on
 
-" splits open at the bottom and right; ctrl+w+v
+" splits open at the bottom and right
 set splitbelow splitright
 " command line completion
 set wildmenu
@@ -107,6 +112,7 @@ call plug#begin('~/.vim/plugged')
 " Autocompletion
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   let g:coc_global_extensions = [
+              "\   'coc-ansible',
               \   'coc-clangd',
               \   'coc-css',
               \   'coc-explorer',
@@ -116,6 +122,8 @@ call plug#begin('~/.vim/plugged')
               \   'coc-pyright',
               \   'coc-solargraph',
               \   'coc-sh',
+              "\   'coc-tsserver',
+              \   'coc-yaml',
               \]
 
 " for golang
@@ -123,9 +131,11 @@ call plug#begin('~/.vim/plugged')
   let g:go_decls_includes = "func,type"
   " Use new vim 8.2 popup windows for Go Doc
   let g:go_doc_popup_window = 1
-  " dont autoformat
-  let g:go_fmt_autosave = 0
-  let g:go_asmfmt_autosave = 0
+
+" for hashicorp
+  Plug 'hashivim/vim-terraform'
+  Plug 'hashivim/vim-vaultproject'
+  "Plug 'hashivim/vim-consul'
 
 " fzf
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -141,7 +151,7 @@ call plug#begin('~/.vim/plugged')
 
 " git for vim
   Plug 'tpope/vim-fugitive'
-  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+  Plug 'mhinz/vim-signify', { 'tag': 'legacy' }
 
 " Lightline
   Plug 'itchyny/lightline.vim'
@@ -156,7 +166,7 @@ call plug#begin('~/.vim/plugged')
   " preceding/following paragraphs to include
   let g:limelight_paragraph_span = 1
 
-"  Plug 'junegunn/goyo.vim'
+  Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -167,6 +177,6 @@ call plug#end()
 source ~/.vim/rc/.vimrc.fold
 source ~/.vim/rc/.vimrc.lightline
 source ~/.vim/rc/.vimrc.maps
-source ~/.vim/rc/.vimrc.colors
+source ~/.vim/rc/.vimrc.palette
 source ~/.vim/rc/.vimrc.coc-explorer
 source ~/.vim/rc/.vimrc.coc

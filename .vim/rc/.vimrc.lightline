@@ -7,12 +7,11 @@ endif
 
 
 let g:lightline = {
-    \   'colorscheme': 'Tomorrow_Night_Blue',
+    \   'colorscheme': 'mine',
     \   'active': {
     \       'left': [
     \                [ 'mode', 'paste' ],
-    \                [ 'readonly', 'filename_modified', 'gitbranch' ],
-    \                [ 'aaatata']
+    \                [ 'readonly', 'filename_modified', 'gitbranch' ]
     \               ],
     \       'right': [
     \                 [ 'percent', 'lineinfo' ],
@@ -28,6 +27,14 @@ let g:lightline = {
     \                 [ 'filetype']
     \                ]
     \   },
+    \   'tabline': {
+    \       'left': [ [ 'tabs' ] ],
+    \       'right': [ [ 'close' ] ],
+    \   },
+    \   'tab': {
+    \       'active': [ 'filename', 'modified' ],
+    \       'inactive': [ 'filename', 'modified' ],
+    \   }
     \   'component_function': {
     \       'mode': 'LightlineMode',
     \       'mode_explorer': 'LightlineModeEx',
@@ -39,6 +46,12 @@ let g:lightline = {
     \       'percent': 'LightlinePercent',
     \       'filetype': 'LightlineFiletype',
     \   },
+    \   'tab_component_function': {
+    \       'filename': 'LightlineTab',
+    \       'modified': 'lightline#tab#modified',
+    \       'readonly': 'lightline#tab#readonly',
+    \       'tabnum': 'lightline#tab#tabnum',
+    \   }
     \   'separator': { 'left': '', 'right': ''  },
     \   'subseparator': { 'left': '', 'right': ''  },
     \ }
@@ -79,21 +92,41 @@ function! LightlineFilename()
   return l:filename . l:modified
 endfunction
 
+function! LightLineTab(n) abort
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+
+  let l:filetype = getbufvar(buflist[winnr - 1], '&filetype')
+  let l:filename = expand('#'.buflist[winnr = 1].':t')
+  let l:icon = WebDevIconsGetFileTypeSymbol(l:filename)
+
+  if l:filetype ==# 'netrw' || l:filetype ==# 'coc-explorer' || l:filetype ==# 'fugitiveblame'
+    return '[EXPLORER]'
+  endif
+  return l:filename !=# '' ? l:icon . ' ' . l:filename : '[No Name]'
+endfunction
+
 function! LightlineBranch() abort
   if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer'
     return ''
   endif
 
   let l:branch = FugitiveHead()
-  return strlen(l:branch) ? (winwidth(0) >= 65 ? ' ' . l:branch : '') : ''
+  if l:branch ==# 'master' || l:branch ==# 'main'
+    let l:branch_symbol = ''
+  else
+    let l:branch_symbol = 'b'
+  endif
+
+  return strlen(l:branch) ? (winwidth(0) >= 85 ? l:branch_symbol . ' ' . l:branch : l:branch_symbol) : ''
 endfunction
 
 function! LightlineAaatata() abort
-  return winwidth(0) > 30 ? (winwidth(0) >= 68 ? ' ' : '') : ''
+  return winwidth(0) > 30 ? (winwidth(0) >= 65 ? ' ' : '') : ''
 endfunction
 
 function! LightlinePercent() abort
-  if winwidth(0) < 44
+  if winwidth(0) < 45
     return ''
   endif
 
@@ -118,8 +151,14 @@ function! LightlineFiletype() abort
 
   if &filetype ==# 'netrw' || &filetype ==# 'coc-explorer' || &filetype ==# 'fugitiveblame'
     let l:branch = FugitiveHead()
-    return strlen(l:branch) ? (strlen(l:branch) <= 9 ? ' ' . l:branch : '') : l:icon
+
+    if l:branch ==# 'master || l:branch ==# 'main'
+      let l:branch_symbol = ''
+    else
+      let l:branch_symbol = 'b'
+    endif
+    return strlen(l:branch) ? l:branch_symbol : l:icon
   endif
 
-  return winwidth(0) >= 68 ? l:icon .' '. &filetype : l:icon
+  return winwidth(0) >= 65 ? l:icon . ' ' . &filetype : l:icon
 endfunction

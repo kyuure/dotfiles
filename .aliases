@@ -1,7 +1,8 @@
 # my own Aliases
-alias v='vi'
+alias v='vim'
 alias g='git'
-alias bat='batcat -n --theme TwoDark --color "always"'
+alias kb='kubectl'
+#alias bat='batcat -n --theme TwoDark --color "always"'
 alias tree='tree -C'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -12,6 +13,13 @@ alias ip='ip --color=auto'
 # ls
 alias ls='ls -G --color=auto'
 alias ll='ls -alFh'
+#alias ll='exa =lga ==icons'
+
+# cd
+alias cdworkspace='cd ~/workspace'
+
+# tmux
+alias attach-tmux='tmux new -As0'
 
 # grep
 alias grep='grep --color=auto'
@@ -34,6 +42,3 @@ export FZF_DEFAULT_OPTS='--multi --height 50% --cycle --keep-right --reverse'
 alias Ex='explorer.exe'
 alias server-on='echo "   $(tput setaf 1)> $(tput setaf 2)python3 -m http.server$(tput sgr0)"; wslview http://localhost:8000; python3 -m http.server'
 alias ctl-on='echo "   $(tput setaf 1)> $(tput setaf 2)systemctl enable$(tput sgr0)"; systemctl enable'
-alias cdheum='cd /mnt/c/HEUM'
-alias cdlab='cd /mnt/c/HEUM/LABORATORY'
-alias cdcs='cd /mnt/c/HEUM/COMP\ SCI'

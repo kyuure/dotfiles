@@ -1,6 +1,8 @@
+set t_Co=256
+
 " cursor line
 set cursorline
-highlight CursorLine ctermbg=Black cterm=NONE
+highlight CursorLine ctermbg=16 cterm=NONE
 
 " color column
 highlight ColorColumn ctermbg=238
@@ -12,10 +14,12 @@ highlight LineNr ctermfg=Magenta
 highlight Statement ctermfg=Yellow
 highlight Identifier ctermfg=Blue
 highlight Comment ctermfg=DarkGrey cterm=italic
-highlight Visual cterm=reverse ctermbg=Black
-highlight Search ctermbg=DarkBlue
-highlight SpecialKey ctermbg=Black ctermfg=DarkBlue
-highlight Folded ctermbg=16 ctermfg=Green
+
+"highlight Visual cterm=reverse ctermbg=Black
+highlight Visual cterm=16
+highlight Search ctermbg=Grey ctermfg=Black
+highlight SpecialKey ctermfg=233
+highlight Folded ctermbg=Black ctermfg=Green
 
 " for vim-fugitive
 highlight DiffAdd ctermbg=DarkGrey ctermfg=DarkGreen cterm=bold

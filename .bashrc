@@ -38,3 +38,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# for tmux bash history
+# Avoid duplication
+HISTCONTROL=ignoredups:erasedups # Ubuntu default is ignoreboth
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend  # In Ubuntu this is already set by  default
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"

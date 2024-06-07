@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles v2
 my very own dotfiles. use bash for shell.
 ![alt text](https://github.com/kyuure/dotfiles/blob/main/.screenshot/5.png "ssan doang | as in 10/05/2022")
 I made this repo so that I can backup my dotfiles easily.

@@ -7,6 +7,34 @@
     "diagnostic.warningSign": "",
     "diagnostic.infoSign": "",
 
+    "explorer.width": 27,
+    "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
+    "explorer.file.root.template": "[icon & 1] [root]",
+    "explorer.file.child.template": " [git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
+    "explorer.file.showHiddenFiles": true,
+    "explorer.file.reveal.auto": false,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.icon.source": "vim-devicons",
+    "explorer.previewAction.onHover": false,
+    "explorer.root.strategies": ["workspace","custom:vcs","custom:vcs-r"],
+
+    "python.linting.enabled": true,
+    "python.pythonPath": "python3",
+    "python.inlayHints.functionReturnTypes": false,
+    "python.inlayHints.variableTypes": false,
+    "python.linting.pylintEnabled": true,
+
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod"],
+            "filetypes": ["go"]
+        }
+    },
+    "go.goplsOptions": {
+        "staticcheck": true
+    },
+
     "suggest.completionItemKindLabels": {
         "keyword": "\uf1de",
         "variable": "\ue79b",
@@ -35,20 +63,7 @@
         "default": "\uf29c"
     },
 
-
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-
     "clangd.path": "/home/kyuure/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
-
-    "explorer.width": 27,
-    "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
-    "explorer.file.root.template": "[icon & 1] [root]",
-    "explorer.file.child.template": " [git | 2] [selection | clip | 1] [indent][icon | 1] [diagnosticError & 1][filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5]",
-    "explorer.file.showHiddenFiles": true,
-    "explorer.file.reveal.auto": false,
-    "explorer.icon.enableNerdfont": true,
-    "explorer.previewAction.onHover": false,
 
     "codeLens.enable": true,
     "solargraph.useBundler": true
