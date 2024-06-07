@@ -5,12 +5,13 @@ I made this repo so that I can backup my dotfiles easily.
 
 
 ## what i use
-Kali WSL2. (but it is compatible with OSX since i use that lately)
+- Ubuntu 24.04 LTS WSL2.
+- MacOS M1
 
 
 ## what i do
 
-### to install it to my Linux-like env
+### to install it to my UNIX-like env
 ```sh
 # Download the resource
 cd
@@ -27,18 +28,16 @@ sudo apt -y install htop clang fzf bat python3 python3-pip ripgrep tree tig
 pip install jedi
 
 # Install nodejs
-sudo curl -sL install-node.now.sh/lts | bash
+# Source: https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+nvm install --lts
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Add undodir for vim
-cd ~/.vim
-mkdir undodir
-
-# Go back to home dir
-cd
+mkdir -p ~/.vim/undodir
 
 # Install vim plugins
 vim +PlugInstall +qall
@@ -70,11 +69,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Add undodir for vim
-cd ~/.vim
-mkdir undodir
-
-# Go back to home dir
-cd
+mkdir -p ~/.vim/undodir
 
 # Install vim plugins
 vim +PlugInstall +qall
@@ -83,10 +78,10 @@ vim +PlugInstall +qall
 ### setup git and ssh
 ```sh
 # Setup git
-git config --global user.name "my-name"
-git config --global user.email "my-email"
+git config --global user.name "My Name"
+git config --global user.email "my@email"
 
 # Setup SHH Key
-ssh-keygen -t rsa -C "my-email"
+ssh-keygen -t ed25519 -C "my@email"
 ssh -T git@github.com
 ```
