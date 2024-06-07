@@ -25,5 +25,3 @@
   aliases = config --get-regexp alias
 [url "https://:@/"]
   insteadOf = https:///
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/

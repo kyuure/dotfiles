@@ -33,7 +33,6 @@ alias django-on='echo "   $(tput setaf 1)> $(tput setaf 2)python manage.py runse
 
 # fzf
 source /usr/share/doc/fzf/examples/key-bindings.bash
-source /usr/share/doc/fzf/examples/completion.bash
 export FZF_COMPLETION_TRIGGER='==='
 export FZF_DEFAULT_COMMAND='find .'
 export FZF_DEFAULT_OPTS='--multi --height 50% --cycle --keep-right --reverse'

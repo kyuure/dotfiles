@@ -16,9 +16,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Enable italic
-export TERM=xterm-256color-italic
-
 # set golang env
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go

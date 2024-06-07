@@ -41,6 +41,8 @@ fi
 
 # for fzf keybind
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# enable ctrl-r fzf
+source /usr/share/doc/fzf/examples/key-bindings.bash
 
 # for tmux bash history
 # Avoid duplicates

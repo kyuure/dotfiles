@@ -31,10 +31,6 @@ set ignorecase
 
 " for syntax highlights
 syntax on
-" set background
-set background=dark
-" set colorscheme
-colorscheme wildcharm
 
 " converts tabs to spaces
 set expandtab
