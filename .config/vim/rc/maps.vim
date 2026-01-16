@@ -2,6 +2,10 @@
 let mapleader = " " "now <leader> is same as <space> lols.
 
 
+" Refresh vimrc
+nmap <leader>r :source ~/.vimrc<CR>
+
+
 " Disable move using arrow in normal mode
 nmap <Up> <Nop>
 nmap <Down> <Nop>
@@ -65,7 +69,7 @@ nmap <leader>ra :%s//g<Left><Left>
 
 " Connecting yank and clipboard on WSL
 " source: https://stackoverflow.com/a/46995591 (see Edit 2)
-autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' |  clip.exe')
+"autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' |  clip.exe')
 
 
 " Fold code block uses curly braces

@@ -2,10 +2,10 @@
   "coc.preferences.extensionUpdateCheck": "weekly",
 
   "diagnostic.checkCurrentLine": true,
-  "diagnostic.errorSign": "✘",
-  "diagnostic.warningSign": "",
-  "diagnostic.infoSign": "",
-  "diagnostic.hintSign": "●",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
 
   "explorer.width": 27,
   "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",

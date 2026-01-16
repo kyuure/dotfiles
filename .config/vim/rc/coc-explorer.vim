@@ -10,7 +10,6 @@ nmap <leader>n :tabnew<bar> :CocCommand explorer <CR>
 " Source: https://github.com/weirongxu/coc-explorer/issues/89#issuecomment-606374700
 augroup ProjectDrawer
   autocmd!
-  "autocmd VimEnter * CocCommand explorer
   autocmd VimEnter * if (winnr("$") == 1 && &filetype == '') | exe 'CocCommand explorer' | endif
 augroup END
 

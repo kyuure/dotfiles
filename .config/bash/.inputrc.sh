@@ -1,4 +1,4 @@
-# Tab autocomplete with case-insensitive
+# tab autocomplete with case-insensitive
 set completion-ignore-case on
 set show-all-if-ambiguous on
 

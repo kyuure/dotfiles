@@ -1,7 +1,9 @@
 # my own Aliases
 alias v='vim'
+alias nv='nvim'
 alias g='git'
 alias kb='kubectl'
+alias kblogs='stern'
 #alias bat='batcat -n --theme TwoDark --color "always"'
 alias tree='tree -C'
 alias cp='cp -i'
@@ -9,14 +11,16 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
+#alias clear='clear; cmatrix'
+alias refresh='source ~/.bash_profile'
 
 # ls
 alias ls='ls -G --color=auto'
-alias ll='ls -alFh'
-#alias ll='exa -lga --icons'
+#alias ll='ls -alFh'
+alias ll='eza -la --icons=always --git --no-user'
 
 # cd
-alias cdworkspace='cd ~/workspace'
+alias cdgotemp='cd ~/Work/temp'
 
 # tmux
 alias attach-tmux='tmux new -As0'
@@ -32,7 +36,6 @@ alias virenv-on='echo "   $(tput setaf 1)> $(tput setaf 2)source bin/activate$(t
 alias django-on='echo "   $(tput setaf 1)> $(tput setaf 2)python manage.py runserver$(tput sgr0)"; wslview http://127.0.0.1:8000/; python manage.py runserver'
 
 # fzf
-source /usr/share/doc/fzf/examples/key-bindings.bash
 export FZF_COMPLETION_TRIGGER='==='
 export FZF_DEFAULT_COMMAND='find .'
 export FZF_DEFAULT_OPTS='--multi --height 50% --cycle --keep-right --reverse'

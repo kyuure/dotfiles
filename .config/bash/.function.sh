@@ -16,7 +16,7 @@ ginf() {
         return 0
     fi
 
-    # Check for git status
+    # check for git status
     git_status="$(git status --porcelain --branch)"
     git_dir="$(git rev-parse --git-dir 2>/dev/null)"
 
@@ -28,18 +28,18 @@ ginf() {
         status="${line:0:2}"
         while [[ -n ${status}  ]]; do
             case "${status}" in
-                # Two fixed character matches, loop finished
+                #two fixed character matches, loop finished
                 \#\#) branch_line="${line/\.\.\./^}"; break ;;
                 \?\?) ((num_untracked++)); break ;;
                 U?) ((num_conflicts++)); break;;
                 ?U) ((num_conflicts++)); break;;
                 DD) ((num_conflicts++)); break;;
                 AA) ((num_conflicts++)); break;;
-                # Two character matches, first loop
+                #two character matches, first loop
                 ?M) ((num_changed++)) ;;
                 ?D) ((num_changed++)) ;;
                 ?\ ) ;;
-                # Single character matches, second loop
+                #single character matches, second loop
                 U) ((num_conflicts++)) ;;
                 \ ) ;;
                 *) ((num_staged++)) ;;
