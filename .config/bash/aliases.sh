@@ -1,20 +1,17 @@
-# my own Aliases
 alias v='vim'
 alias nv='nvim'
 alias g='git'
 alias kb='kubectl'
 alias kblogs='stern'
-#alias bat='batcat -n --theme TwoDark --color "always"'
+alias bat='batcat -n --theme TwoDark --color "always"'
 alias tree='tree -C'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 alias diff='diff --color=auto'
 alias ip='ip --color=auto'
-#alias clear='clear; cmatrix'
 alias refresh='source ~/.bash_profile'
 
-# ls
 alias ls='ls -G --color=auto'
 #alias ll='ls -alFh'
 alias ll='eza -la --icons=always --git --no-user'

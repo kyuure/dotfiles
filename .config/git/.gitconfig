@@ -1,5 +1,0 @@
-[user]
-  email = qothrunnada.salsa@gmail.com
-  name = S Qothrunnada
-[core]
-  sshCommand = "ssh -i ~/.ssh/personal -o IdentitiesOnly=yes"

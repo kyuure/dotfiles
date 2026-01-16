@@ -9,7 +9,7 @@ local function tab_win_closed(winnr)
   end, vim.api.nvim_tabpage_list_wins(tabnr))
   local tab_bufs = vim.tbl_map(vim.api.nvim_win_get_buf, tab_wins)
   if buf_info.name:match(".*NvimTree_%d*$") then -- close buffer was nvim tree
-    -- Close all nvim tree on :q
+    -- close all nvim tree on :q
     if not vim.tbl_isempty(tab_bufs) then -- and was not the last window (not closed automatically by code below)
       api.tree.close()
     end

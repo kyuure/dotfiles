@@ -1,15 +1,73 @@
-# Output files
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+# --- Operating System Files ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
 
-# Compiled Python files
-*.pyc
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# packages
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# --- IDEs and Editors ---
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# Neovim / Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+.netrwhist
+undo/
+tags
+.nvimlog
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# --- Environment and Secrets ---
+.env
+.env.local
+.env.*.local
+*.secret
+*.pem
+*.key
+
+# --- Compiled/Binary Tools ---
+# General Node/NVM
+node_modules/
+npm-debug.log*
+.nvmrc
+
+# General Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Packages
 *.7z
 *.dmg
 *.gz
@@ -28,9 +86,6 @@
 *.tmp
 *.backup
 *.bak
-
-# Vim files
-*.vimrc
 
 # Secret files
 *secrets.sh

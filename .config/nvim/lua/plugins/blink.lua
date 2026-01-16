@@ -32,7 +32,7 @@ return {
     completion = {
       menu = {
         border = "rounded",
-        -- My savior: https://github.com/LazyVim/LazyVim/discussions/5056#discussioncomment-11574267
+        -- Savior: https://github.com/LazyVim/LazyVim/discussions/5056#discussioncomment-11574267
         winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
         draw = {
           columns = {
